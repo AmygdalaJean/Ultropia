@@ -1,0 +1,14 @@
+html, body 
+{
+    overflow-x: hidden;
+}
+
+
+.full-width-bar 
+{
+    margin: 0 -9999rem;
+    padding: 0.25rem 9999rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
