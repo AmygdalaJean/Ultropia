@@ -1,16 +1,23 @@
 import React from "react";
 import Content from "./Components/Content";
 import EntryCard from "./Components/EntryCard"
-import { makeStyles } from '@material-ui/core/styles';
 import VertBar from "./Components/VertBar"
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-
+import grey from '@material-ui/core/colors/grey';
+import amber from '@material-ui/core/colors/amber';
+import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
 import placeholder from './Components/Images/placeholder.jpg'
 
 import "./static/App.css";
 
+const custTheme = createTheme({
+  palette: {
+    primary: grey,
+    secondary: amber
+  }
+})
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,6 +38,7 @@ function App() {
   const classes = useStyles();
 
   return (
+    <ThemeProvider theme={custTheme}>
       <div className={classes.root}>
         <img className="mainImg" src={placeholder} alt="The ultropia prototype"/>
         <Grid container spacing={3}>
@@ -49,6 +57,7 @@ function App() {
           </Grid>
         </Grid>
       </div>      
+    </ThemeProvider>
       
   );
 }

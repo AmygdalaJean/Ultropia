@@ -26,14 +26,14 @@ function EntryCard() {
                 <Grid item xs={2}>
 
                 </Grid><Grid item xs={8}>
-                    <Paper className={classes.paper}>
-                        <Container align="center" style={{padding: 25}}> 
+                    <Paper className={classes.paper} >
+                        <Container align="center" style={{padding: 25}} > 
 
                             <Typography variant="h3"  >
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                             </Typography>
 
-                            <Typography variant="p" color="textSecondary" >
+                            <Typography variant="p" color="textSecondary">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </Typography>
