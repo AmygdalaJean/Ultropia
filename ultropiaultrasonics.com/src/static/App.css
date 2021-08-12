@@ -40,6 +40,12 @@
 
 .mainImg
 {
-  height: auto;
+  height: 1000px;
   width: 100%;
+}
+
+.aboutProductImg
+{
+  height: 200px;
+  width: auto;
 }

@@ -8,6 +8,8 @@ import ListItem from '@material-ui/core/ListItem';
 import Container from '@material-ui/core/Container';
 import Logo from './Images/ultropia1.png'
 import { Typography } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 const drawerWidth = 240;
 
@@ -52,6 +54,15 @@ export default function PermanentDrawerLeft() {
         <div className={classes.toolbar} />
 
         <img src={Logo} alt="Logo Here"/>
+
+        <ButtonGroup variant="contained" color="secondary" orientation="vertical">
+          <Button>
+            Get in Touch
+          </Button>
+          <Button>
+            About us
+          </Button>
+        </ButtonGroup>
         
 
         <Divider />
@@ -92,6 +103,8 @@ export default function PermanentDrawerLeft() {
                     <ListItem>Consectetur adipiscing </ListItem>                
                 </List>
             </Container>
+
+          <Divider />
 
       </Drawer>
     </div>

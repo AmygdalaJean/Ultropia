@@ -6,9 +6,12 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import grey from '@material-ui/core/colors/grey';
 import amber from '@material-ui/core/colors/amber';
+import AboutProduct from './Components/AboutProduct';
 import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
 import placeholder from './Components/Images/placeholder.jpg'
+
+import Box from '@material-ui/core/Box'
 
 import "./static/App.css";
 
@@ -29,8 +32,8 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   overlay: {
-    position: 'absolute', left: '60%', top: '20%',
-    transform: 'translate(-60%, -20%)'
+    position: 'absolute', left: '50%', top: '30%',
+    transform: 'translate(-50%, -30%)'
  }
 }));
 
@@ -40,20 +43,24 @@ function App() {
   return (
     <ThemeProvider theme={custTheme}>
       <div className={classes.root}>
-        <img className="mainImg" src={placeholder} alt="The ultropia prototype"/>
+      <img className="mainImg" src={placeholder} alt="The ultropia prototype"/>
         <Grid container spacing={3}>
           <Grid item xs={3}>            
             <VertBar/>         
           </Grid>
           <Grid item xs={6}>
-            <Container maxWidth="md" className={classes.overlay}>          
+          
+            <Container maxWidth="md" className={classes.overlay}>    
+                  
               <EntryCard/>
               
             </Container>   
+            
             <Content/>
+
           </Grid>
           <Grid item xs={3}>            
-            <VertBar/>         
+            
           </Grid>
         </Grid>
       </div>      
