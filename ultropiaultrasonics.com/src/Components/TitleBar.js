@@ -4,11 +4,15 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+  },
+  toolbarStyle: {
+    minHeight: 150,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -18,22 +22,26 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NavigationalBar() {
+
+
+export default function TitleBar() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-  
-          <img src="ultropia1.png"/>
+      <AppBar position="static" color="secondary">
+        <Toolbar className={classes.toolbarStyle}>
 
-          <Typography variant="h6" className={classes.title}>
-            
-          </Typography>
+          <Typography variant="h6" className={classes.title}></Typography>
 
-          <Button color="inherit">Get in Touch</Button>
-          <Button color="inherit">About us</Button>
+          <ButtonGroup variant="contained" color="primary" orientation="vertical">
+            <Button>
+              Get in Touch
+            </Button>
+            <Button>
+              About us
+            </Button>
+          </ButtonGroup>
 
         </Toolbar>
       </AppBar>
