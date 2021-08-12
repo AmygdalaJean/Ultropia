@@ -27,9 +27,9 @@ function EntryCard() {
 
                 </Grid><Grid item xs={8}>
                     <Paper className={classes.paper}>
-                        <Container align="center" style={{padding: 45}}> 
+                        <Container align="center" style={{padding: 25}}> 
 
-                            <Typography variant="h4"  >
+                            <Typography variant="h3"  >
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                             </Typography>
 

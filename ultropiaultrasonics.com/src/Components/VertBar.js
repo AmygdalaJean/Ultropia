@@ -5,11 +5,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import Container from '@material-ui/core/Container';
 import Logo from './Images/ultropia1.png'
+import { Typography } from '@material-ui/core';
 
 const drawerWidth = 240;
 
@@ -28,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
   drawerPaper: {
     width: drawerWidth,
   },
-  // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
@@ -58,23 +55,44 @@ export default function PermanentDrawerLeft() {
         
 
         <Divider />
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+
+        <Container style={{padding: 15}}>
+            <Typography variant="h6">
+                About the Product
+            </Typography>
+            <List >
+                <ListItem>Lorem ipsum </ListItem>       
+                <ListItem>Dolor sit amet</ListItem>
+                <ListItem>Consectetur adipiscing </ListItem>                
+            </List>
+        </Container>
+
         <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+
+        <Container style={{padding: 15}}>
+            <Typography variant="h6">
+                Enviromental Effects
+            </Typography>
+            <List >
+                <ListItem>Lorem ipsum </ListItem>       
+                <ListItem>Dolor sit amet</ListItem>
+                <ListItem>Consectetur adipiscing </ListItem>                
+            </List>
+        </Container>
+
+        <Divider />
+
+            <Container style={{padding: 15}}>
+                <Typography variant="h6">
+                    Our Timeline
+                </Typography>
+                <List >
+                    <ListItem>Lorem ipsum </ListItem>       
+                    <ListItem>Dolor sit amet</ListItem>
+                    <ListItem>Consectetur adipiscing </ListItem>                
+                </List>
+            </Container>
+
       </Drawer>
     </div>
   );

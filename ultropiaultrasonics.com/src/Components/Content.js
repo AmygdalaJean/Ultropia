@@ -1,13 +1,14 @@
 import React from "react";
-import EntryCard from "./EntryCard";
 
-import "./../static/navbar.css";
+import "./../static/App.css";
 
 function Content() {
 
   return (
     <div>
-      <EntryCard/>
+        <h1>
+            Where does this end up
+        </h1>
     </div>
   );
 }
