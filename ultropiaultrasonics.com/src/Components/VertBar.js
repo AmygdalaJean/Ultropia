@@ -8,8 +8,7 @@ import ListItem from '@material-ui/core/ListItem';
 import Container from '@material-ui/core/Container';
 import Logo from './Images/ultropia1.png'
 import { Typography } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
+import Control from './Control';
 
 const drawerWidth = 240;
 
@@ -55,14 +54,8 @@ export default function PermanentDrawerLeft() {
 
         <img src={Logo} alt="Logo Here"/>
 
-        <ButtonGroup variant="contained" color="secondary" orientation="vertical">
-          <Button>
-            Get in Touch
-          </Button>
-          <Button>
-            About us
-          </Button>
-        </ButtonGroup>
+
+        <Control/>
         
 
         <Divider />
