@@ -136,8 +136,8 @@ export default function Control() {
                 </ButtonGroup>
             </DialogActions>
         </Dialog>
-        <Button >
-        About us
+        <Button href='https://www.linkedin.com/company/ultropia/'>
+          About us
         </Button>
     </ButtonGroup>
         

@@ -1,6 +1,8 @@
 import React from "react";
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container'
+import Paper from '@material-ui/core/Paper'
 
 import prototypeDiagram from './Images/smallprototypeCr.png'
 
@@ -14,7 +16,10 @@ const useStyles = makeStyles((theme) => ({
       },
     paper: {
       padding: theme.spacing(2),
-      textAlign: 'left',
+      margin: '100px',
+      marginTop:'50px',
+      marginBottom:'0px',
+      backgroundColor: 'gold',
     },
     listItem: {
         paddingTop: '25px',
@@ -30,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
     },
     subheading: {
-        paddingTop: '75px',
+        paddingTop: '20px',
         textAlign:'center'
     },
     topText: {
@@ -43,6 +48,13 @@ const useStyles = makeStyles((theme) => ({
         height: 'auto',
         alignSelf: 'center',
     },
+    largeText: {
+        padding: '50px',
+        paddingTop: '20px',
+        paddingBottom: '20px',
+        textAlign: 'center',
+    },
+
 }));
 
 function Content() {
@@ -52,9 +64,32 @@ function Content() {
     <div >
         <Typography >
             <Typography variant="h4" className={classes.subheading} >
-                <b>What is it?</b>
+                {/* <b>What is it?</b> */}
             </Typography>
-          <Grid container spacing={2}>
+
+            <Container>
+                <Paper className={classes.paper}>
+                    <div className={classes.largeText} >
+                        <Typography variant="h5">
+                            <div style={{paddingBottom: '5px'}}>
+                                <strong><i>Say goodbye to your washer and dryer!</i></strong>
+                            </div>
+
+                            The <i>Ultromatic</i> is a two-in-one washing and drying machine that uses
+                            a high frequency ultrasonic emitter to clean, sanitize, and dry clothing
+                            faster and more efficent than ever possible before.
+                        </Typography>
+                        
+                    </div>                    
+                </Paper>
+                <div style={{ textAlign:'center' }}>
+                    <img src={prototypeDiagram} />
+                </div>
+            </Container>
+            
+
+
+          {/* <Grid container spacing={2}>
             <Grid item xs={6}>     
                 <Typography variant="h6" className={classes.topText}>      
                     
@@ -79,7 +114,7 @@ function Content() {
             <Grid item xs={6}>
                 <img src={prototypeDiagram} style={{ alignSelf: 'center'}}/>
             </Grid>
-        </Grid>
+        </Grid> */}
     </Typography>
 
     </div>

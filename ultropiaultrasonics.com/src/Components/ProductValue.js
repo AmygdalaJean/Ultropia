@@ -26,6 +26,8 @@ const useStyles = makeStyles((theme) => ({
     },
     tableItem: {
         padding: '85px',
+        paddingTop: '50px',
+        paddingBottom: '50px',
         textAlign: 'center',
     },
     subheading: {
@@ -51,7 +53,7 @@ function Content() {
     <div >
 
         <Typography variant="h4" className={classes.subheading} >       
-            <b>What Does it Do?</b>
+            {/* <b>What Does it Do?</b> */}
         </Typography>
            
           <Grid container spacing={2} >

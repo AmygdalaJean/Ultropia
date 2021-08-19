@@ -4,6 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
+import Logo from './Images/ultropia1.png'
+
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -25,21 +27,31 @@ function EntryCard() {
 
                 <Grid item xs={2}>
 
-                </Grid><Grid item xs={8}>
-                    <Paper className={classes.paper} >
-                        <Container align="center" style={{padding: 25}} > 
+                </Grid>
+                
+                <Grid item xs={8}>
+
+            
+                <Paper >
+                    <img src={Logo} style={{width:'100%', alignSelf:'center'}}/>
+                </Paper>
+                    {/* <Paper className={classes.paper} >
+                        <Container align="center"  > 
+
+                            
+                            
+                            
 
                             <Typography variant="h3"  >
-                                Lorem ipsum dolor sit amet 
+                                Ultropia
                             </Typography>
 
                             <Typography variant="p" color="textSecondary">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Revolutionizing how We Do Laundry
                             </Typography>
 
                         </Container>
-                    </Paper>            
+                    </Paper>             */}
                 </Grid>   
                 <Grid item xs={2}></Grid>
             </Grid>

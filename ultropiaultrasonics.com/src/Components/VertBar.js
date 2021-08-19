@@ -6,7 +6,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import Container from '@material-ui/core/Container';
-import Logo from './Images/ultropia1.png'
+import Logo from './Images/logosmall1.png'
 import { Typography } from '@material-ui/core';
 import Control from './Control';
 
@@ -55,7 +55,7 @@ export default function PermanentDrawerLeft() {
           <img src={Logo} alt="Logo Here" />
         </div> */}
   
-        <img src={Logo} alt="Logo Here" style={{ paddingTop: 35, paddingBottom: 5}}/>   
+        <img src={Logo} alt="Logo Here" style={{padding: 60, paddingTop: 20, paddingBottom: 20}}/>   
         <Control />        
 
         <Container style={{padding: 15}}>
@@ -63,9 +63,9 @@ export default function PermanentDrawerLeft() {
                 About the Product
             </Typography>
             <List >
-                <ListItem>Lorem ipsum </ListItem>       
-                <ListItem>Dolor sit amet</ListItem>
-                <ListItem>Consectetur adipiscing </ListItem>                
+                <ListItem>What is it? </ListItem>       
+                <ListItem>What Does it Do?</ListItem>
+                <ListItem>How Does it Work? </ListItem>                
             </List>
         </Container>
 
@@ -84,18 +84,7 @@ export default function PermanentDrawerLeft() {
 
         <Divider />
 
-            <Container style={{padding: 15}}>
-                <Typography variant="h6">
-                    Our Timeline
-                </Typography>
-                <List >
-                    <ListItem>Lorem ipsum </ListItem>       
-                    <ListItem>Dolor sit amet</ListItem>
-                    <ListItem>Consectetur adipiscing </ListItem>                
-                </List>
-            </Container>
 
-          <Divider />
 
       </Drawer>
     </div>

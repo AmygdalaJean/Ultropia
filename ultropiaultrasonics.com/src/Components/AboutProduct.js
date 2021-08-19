@@ -33,7 +33,7 @@ function Content() {
         <Paper className={classes.paper} elevation={5}>
 
             <Typography variant="h3" className={classes.superheading}>
-                <div>The <b>Ultramat</b>;</div>
+                <div>The <b>Ultramatic</b>;</div>
                 <Typography variant="h4">
                     <i>Democratizing Laundry</i>
                 </Typography>
