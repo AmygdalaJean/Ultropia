@@ -1,6 +1,6 @@
 import React from "react";
 import AboutProduct from './AboutProduct';
-import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box'
 import EnviroEffects from './EnviroEffects'
 
@@ -11,10 +11,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
       },
-    paper: {
-      padding: theme.spacing(2),
-      textAlign: 'left',
-    },
 }));
 
 function Content() {

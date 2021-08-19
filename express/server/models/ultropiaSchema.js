@@ -5,6 +5,10 @@ const ultSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    note: {
+        type: String,
+        required: false
+    },
     dateAdded: {
         type: Date,
         required: true,

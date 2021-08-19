@@ -9,9 +9,8 @@ import amber from '@material-ui/core/colors/amber';
 import AboutProduct from './Components/AboutProduct';
 import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
-import placeholder from './Components/Images/placeholder.jpg'
+import bgImg from './Components/Images/bgImg1.png'
 
-import Box from '@material-ui/core/Box'
 
 import "./static/App.css";
 
@@ -32,9 +31,15 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   overlay: {
-    position: 'absolute', left: '50%', top: '30%',
-    transform: 'translate(-50%, -30%)'
- }
+    position: 'absolute', left: '65%', top: '25%',
+    transform: 'translate(-65%, -25%)'
+ },
+  content: {
+    width: '100%',
+    display: 'flex',
+    backgroundColor: 'gold',
+    marginTop: '100px',
+  },
 }));
 
 function App() { 
@@ -43,12 +48,11 @@ function App() {
   return (
     <ThemeProvider theme={custTheme}>
       <div className={classes.root}>
-      <img className="mainImg" src={placeholder} alt="The ultropia prototype"/>
-        <Grid container spacing={3}>
-          <Grid item xs={3}>            
+      <img className="mainImg" src={bgImg} alt="The ultropia prototype"/>
+          <Grid container spacing={3}>
+          
             <VertBar/>         
-          </Grid>
-          <Grid item xs={6}>
+
           
             <Container maxWidth="md" className={classes.overlay}>    
                   
@@ -56,12 +60,12 @@ function App() {
               
             </Container>   
             
-            <Content/>
+            <Container maxWidth="md" className={classes.content}>    
+                  
+              <Content/>
+                  
+            </Container>             
 
-          </Grid>
-          <Grid item xs={3}>            
-            
-          </Grid>
         </Grid>
       </div>      
     </ThemeProvider>

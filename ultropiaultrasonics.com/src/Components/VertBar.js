@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
+
   },
   toolbar: theme.mixins.toolbar,
   content: {
@@ -50,15 +51,12 @@ export default function PermanentDrawerLeft() {
         }}
         anchor="left"
       >
-        <div className={classes.toolbar} />
-
-        <img src={Logo} alt="Logo Here"/>
-
-
-        <Control/>
-        
-
-        <Divider />
+        {/* <div style={{ alignSelf: 'center', padding: 35}}>
+          <img src={Logo} alt="Logo Here" />
+        </div> */}
+  
+        <img src={Logo} alt="Logo Here" style={{ paddingTop: 35, paddingBottom: 5}}/>   
+        <Control />        
 
         <Container style={{padding: 15}}>
             <Typography variant="h6">

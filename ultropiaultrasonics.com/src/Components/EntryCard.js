@@ -30,7 +30,7 @@ function EntryCard() {
                         <Container align="center" style={{padding: 25}} > 
 
                             <Typography variant="h3"  >
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Lorem ipsum dolor sit amet 
                             </Typography>
 
                             <Typography variant="p" color="textSecondary">

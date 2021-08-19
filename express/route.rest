@@ -1,0 +1,18 @@
+GET http://localhost:3001/ultropia
+
+###
+
+POST http://localhost:3001/ultropia
+Content-Type: application/json
+
+{
+    "email": "wade.cappa@msn.com"
+}
+
+###
+
+GET http://localhost:3001/ultropia/611716cc21388e66265c9812
+
+###
+
+DELETE http://localhost:3001/ultropia/611817f1a852415a99b577a0
