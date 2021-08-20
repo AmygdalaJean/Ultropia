@@ -1,5 +1,5 @@
 import React from "react";
-import Content from "./Components/Content";
+import Box from '@material-ui/core/Box'
 import EntryCard from "./Components/EntryCard"
 import VertBar from "./Components/VertBar"
 import Container from '@material-ui/core/Container';
@@ -10,6 +10,8 @@ import AboutProduct from './Components/AboutProduct';
 import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
 import bgImg from './Components/Images/bgImg1.png'
+
+import EnviroEffects from './Components/EnviroEffects'
 
 
 import "./static/App.css";
@@ -36,9 +38,10 @@ const useStyles = makeStyles((theme) => ({
  },
   content: {
     width: '100%',
-    display: 'flex',
     backgroundColor: 'gold',
     marginTop: '100px',
+    marginBottom: '100px',
+    paddingBottom: '25px'
   },
 }));
 
@@ -62,10 +65,21 @@ function App() {
             
             <Container maxWidth="md" className={classes.content}>    
                   
-              <Content/>
+            <div >
+              <div>
+                <Box m={0} pt={5}>              
+                  <AboutProduct/>
+                </Box>
+              </div>
+              
+              <div style={{paddingTop: '100px'}}>
+                <Box m={0} pt={5}>              
+                  <EnviroEffects/>
+                </Box> 
+              </div>   
+            </div>
                   
-            </Container>             
-
+            </Container>       
         </Grid>
       </div>      
     </ThemeProvider>

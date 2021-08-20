@@ -18,13 +18,9 @@ function Content() {
 
   return (
     <div className={classes.root}>
-      <Box m={0} pt={5}>              
-        <AboutProduct/>
-      </Box>
 
-      <Box m={0} pt={8}>              
-        <EnviroEffects/>
-      </Box>
+
+  
     </div>
   );
 }
