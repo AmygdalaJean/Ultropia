@@ -1,8 +1,7 @@
 import React from "react";
-import HumanRight from './HumanRight'
-import WeDoItBetter from './WeDoItBetter'
-import BestOption from './BestOption'
-
+import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
+import ReactPlayer from "react-player"
 
 import "./../static/App.css";
 
@@ -21,21 +20,23 @@ const useStyles = makeStyles((theme) => ({
         padding: '150px',
         paddingTop: '35px',
         paddingBottom: '35px',
-        
+    },
+    subHeading: {
+        textAlign: 'center',
+        padding: '150px',
+        paddingTop: '50px',
+        paddingBottom: '50px',
     }
 }));
 
-function Content() {
+function WhyUltramatic() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <HumanRight />
-      <WeDoItBetter />
-      <BestOption/>
-      
+
     </div>
   );
 }
 
-export default Content;
+export default WhyUltramatic;

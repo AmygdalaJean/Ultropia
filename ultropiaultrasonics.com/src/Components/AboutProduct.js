@@ -18,6 +18,8 @@ const useStyles = makeStyles((theme) => ({
     paper: {
       padding: theme.spacing(2),
       textAlign: 'left',
+      marginBottom: '0px',
+      borderRadius: 40/ 2
     },
     superheading: {
         textAlign: 'center',
@@ -41,7 +43,13 @@ function Content() {
 
             <ProductIntroduction/>
 
+        </Paper>
+      
+        
+
             <ProductValue/>
+
+          <Paper className={classes.paper} elevation={5}>
 
             <Science/>    
             

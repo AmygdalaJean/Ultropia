@@ -30,10 +30,10 @@ function Demos() {
   const classes = useStyles();
 
   return (
-    <div>       
-        <Grid container spacing={1}>
-            <Grid item xs={4}>
-                <div className={classes.videoHeading}>
+    <div style={{padding:'20px'}} id="UltrasonicCleaning" >       
+        <Grid container spacing={4} >
+            <Grid item xs={4} > 
+                <div className={classes.videoHeading} >
                     <Typography variant="caption">
                         Large ultrasonic washer removes all rust and grease from an old engine.
                     </Typography>

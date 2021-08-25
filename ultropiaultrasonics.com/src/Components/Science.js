@@ -2,6 +2,7 @@ import React from "react";
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container'
+import Divider from '@material-ui/core/Divider'
 
 import ultrasonicCleaner from './Images/Filter_ultrasonic_cleaner.jpg'
 import ultradiagram from './Images/ultrasonic-diagram.webp'
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: '20px'
     },
     topText: {
-        textAlign: 'justify',
+        textAlign: 'center',
     },
     subContainer: {
         paddingTop: '25px',
@@ -33,36 +34,180 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         maxWidth: '300px',
         height: 'auto',
-        alignSelf: 'center',
+        float: 'center',
     },
+    scienceText: {
+        fontSize: 24
+    },
+    div: {
+        marginTop:'50px',
+        marginBottom:'50px'
+    }
 }));
 
 function Science() {
   const classes = useStyles();
 
   return (
-    <div>       
+    <div id="UltramaticScience">       
 
         <Typography variant="h4" className={classes.subheading} >
-            {/* <b>How Does it Work?</b> */}
+            <b>How Does it Work?</b>
         </Typography>
         <Container style={{padding:'50px'}}>
+
+        <Grid container spacing={2} className={classes.subContainer}>
+                <Grid item xs={8}>   
+                    <Typography variant="subtitle2" className={classes.topText}>  
+                        <div className={classes.scienceText}>    
+                            <a href="https://en.wikipedia.org/wiki/Ultrasonic_cleaning" target='_blank'>Ultrasonic Cleaning</a> is 
+                            the practice of blasting dirty items with ultrasonic high frequency waves. 
+                        </div>
+                    </Typography>     
+                </Grid>
+                <Grid item xs={4}>
+                    {/* <div style={{paddingTop: '0px'}} >
+                        <img src={ultradiagram} className={classes.img}/>
+                    </div> */}
+                </Grid>
+            </Grid>
+
+            <Divider className={classes.div}/>
+
             <Grid container spacing={2} className={classes.subContainer}>
+                <Grid item xs={4}>
+                    {/* <div style={{paddingTop: '0px'}} >
+                        <img src={ultradiagram} className={classes.img}/>
+                    </div> */}
+                </Grid>
+                <Grid item xs={8}>   
+                
+                    <Typography variant="subtitle2" className={classes.topText}>  
+                        <div className={classes.scienceText}>    
+                            These waves rip through the water and create micro-vacuums within the medium. 
+                        </div>
+                    </Typography>     
+                </Grid>
+
+            </Grid>
+
+            <Divider className={classes.div}/>
+
+            <Grid container spacing={2} className={classes.subContainer}>
+                <Grid item xs={8}>   
+                    <Typography variant="subtitle2" className={classes.topText}>  
+                        <div className={classes.scienceText}>    
+                            It is the collapse of these vacuums that knocks loose dirt, 
+                            kill bacteria, and viruses. This quickly cleans and sanitizes any item. 
+                        </div>
+                    </Typography>     
+                </Grid>
+
+                <Grid item xs={4}>
+                    {/* <div style={{paddingTop: '0px'}} >
+                        <img src={ultradiagram} className={classes.img}/>
+                    </div> */}
+                </Grid>             
+
+            </Grid>
+
+            <Divider className={classes.div}/>
+
+            <Grid container spacing={2} className={classes.subContainer}>
+                <Grid item xs={4}>
+                    {/* <div style={{paddingTop: '0px'}} >
+                        <img src={ultradiagram} className={classes.img}/>
+                    </div> */}
+                </Grid>
+                <Grid item xs={8}>   
+                
+                    <Typography variant="subtitle2" className={classes.topText}>  
+                        <div className={classes.scienceText}>    
+                            Ultrasonic cleaning is very fast, with deep cleans 
+                            taking around 5 – 20 minutes on complex objects.
+                        </div>
+                    </Typography>     
+                </Grid>
+
+            </Grid>
+
+            <Divider className={classes.div}/>
+
+            <Grid container spacing={2} className={classes.subContainer}>
+                <Grid item xs={8}>   
+                    <Typography variant="subtitle2" className={classes.topText}>  
+                        <div className={classes.scienceText}>    
+                            Currently, ultrasonic cleaning is used frequently to clean complex and/or 
+                            fragile items, such as electronics, watches, and jewelry.
+                        </div>
+                    </Typography>     
+                </Grid>
+
+                <Grid item xs={4}>
+                    {/* <div style={{paddingTop: '0px'}} >
+                        <img src={ultradiagram} className={classes.img}/>
+                    </div> */}
+                </Grid>             
+
+            </Grid>
+
+            <Divider className={classes.div}/>
+
+            <Grid container spacing={2} className={classes.subContainer}>
+                <Grid item xs={4}>
+                    {/* <div style={{paddingTop: '0px'}} >
+                        <img src={ultradiagram} className={classes.img}/>
+                    </div> */}
+                </Grid>
+                <Grid item xs={8}>   
+                
+                    <Typography variant="subtitle2" className={classes.topText}>  
+                        <div className={classes.scienceText}>    
+                        Ultrasonic drying works very similarly. Given a wet object, 
+                        it can be quickly dried by blasting it with ultrasonic waves.
+                        </div>
+                    </Typography>     
+                </Grid>
+
+            </Grid>
+
+            <Divider className={classes.div}/>
+
+            <Grid container spacing={2} className={classes.subContainer}>
+                <Grid item xs={7}>   
+                    <Typography variant="subtitle2" className={classes.topText}>  
+                        <div className={classes.scienceText}>    
+                        These waves are absorbed by water, heating it up and causing quick 
+                        evaporation. The United States Department of Energy states in this 
+                        paper, that this process is very fast in comparison to traditional 
+                        drying methods. 
+                        </div>
+                    </Typography>     
+                </Grid>
+
+                <Grid item xs={5}>
+                    <div style={{paddingTop: '0px', float:'center'}} >
+                        <img src={colddry} className={classes.img}/>
+                    </div>
+                </Grid>             
+
+            </Grid>
+
+
+            {/* <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={8}>   
                     <Typography variant="h6" className={classes.topText}>  
                         <div className={classes.listItem}>    
-                            <a href="https://en.wikipedia.org/wiki/Ultrasonic_cleaning" target='_blank'>Ultrasonic Washing</a> is 
-                            the practice of blasting dirty items with ultrasonic high frequency waves to 
-                            clean them thoroughly and quickly. Ultrasonic cleaning is used frequently to clean 
-                            complex and/or fragile items, such as electronics, watches, and jewelry. 
+                            <a href="https://en.wikipedia.org/wiki/Ultrasonic_cleaning" target='_blank'>Ultrasonic Cleaning</a> is 
+                            the practice of blasting ultrasonic high frequency waves through a travel medium (like water) 
+                            to clean an item.
+                            These waves rip through the water and create micro-vacuums, which violently collapse to 
+                            knock loose dirt,
+                            kill bacteria, and viruses. This thoroughly cleans any object quickly. Currently, 
+                            ultrasonic cleaning is used frequently to clean complex and/or fragile items, 
+                            such as electronics, watches, and jewelry.
                         </div>
                     </Typography>     
-                    <Typography variant="caption" className={classes.topText}>
-                        <div className={classes.topText}>
-                            The image on the right is a standard market ultrasonic cleaning device
-                            for medium tooling equipment.
-                        </div>
-                    </Typography> 
                 </Grid>
                 <Grid item xs={4}>
                     <div style={{paddingTop: '0px'}} >
@@ -70,6 +215,8 @@ function Science() {
                     </div>
                 </Grid>
             </Grid>
+
+            <Divider/>
 
             <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={4}>
@@ -91,6 +238,7 @@ function Science() {
                 </Grid>
             </Grid>
 
+            <Divider/>
 
             <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={8}>   
@@ -115,6 +263,7 @@ function Science() {
                 </Grid>
             </Grid>
 
+            <Divider/>
 
             <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={4}>
@@ -124,7 +273,7 @@ function Science() {
                 </Grid>
                 <Grid item xs={8}>   
                     <Typography variant="h6" className={classes.topText}>
-                        <div className={classes.listItem}>
+                        <div className={classes.listItem} id="UltrasonicCleaning">
                             The <i>United State Department of Energy</i> concludes 
                             in <a href="" target='_blank'>this paper</a> that drying clothes with ultrasonic 
                             waves is <b>exponentially</b> more energy efficent and faster
@@ -134,10 +283,9 @@ function Science() {
                         </div>
                     </Typography>      
                 </Grid>
-            </Grid>
+            </Grid> */}
         </Container>
     </div>
-
   );
 }
 

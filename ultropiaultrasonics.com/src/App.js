@@ -1,4 +1,5 @@
 import React from "react";
+import { Image } from 'react-native'
 import Box from '@material-ui/core/Box'
 import EntryCard from "./Components/EntryCard"
 import VertBar from "./Components/VertBar"
@@ -12,6 +13,7 @@ import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles
 import bgImg from './Components/Images/bgImg1.png'
 
 import EnviroEffects from './Components/EnviroEffects'
+import FooterBar from './Components/FooterBar'
 
 
 import "./static/App.css";
@@ -33,15 +35,15 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   overlay: {
-    position: 'absolute', left: '65%', top: '25%',
-    transform: 'translate(-65%, -25%)'
+    position: 'absolute', left: '50%', top: '25%',
+    transform: 'translate(-60%, -25%)'
  },
   content: {
     width: '100%',
     backgroundColor: 'gold',
     marginTop: '100px',
-    marginBottom: '100px',
-    paddingBottom: '25px'
+    padding: '25px',
+    borderRadius: 80/ 2
   },
 }));
 
@@ -50,12 +52,17 @@ function App() {
 
   return (
     <ThemeProvider theme={custTheme}>
-      <div className={classes.root}>
-      <img className="mainImg" src={bgImg} alt="The ultropia prototype"/>
+      <div className={classes.root} id="Top">
+        <img src={bgImg} alt="The ultropia prototype" style={{
+          height: 'auto', 
+          width:'100%', 
+          maxWidth:'2200px',
+          backgroundColor:'black',
+          float:'right',     
+          }}/>
           <Grid container spacing={3}>
           
             <VertBar/>         
-
           
             <Container maxWidth="md" className={classes.overlay}>    
                   
@@ -63,21 +70,31 @@ function App() {
               
             </Container>   
             
-            <Container maxWidth="md" className={classes.content}>    
+            <Container maxWidth="md" >    
                   
             <div >
-              <div>
-                <Box m={0} pt={5}>              
-                  <AboutProduct/>
+              <div id="UltramaticIntro">
+                <Box  className={classes.content}>              
+                  <AboutProduct />
                 </Box>
               </div>
               
-              <div style={{paddingTop: '100px'}}>
-                <Box m={0} pt={5}>              
+              <div style={{paddingTop: '0px'}}>
+                <Box  className={classes.content}>              
                   <EnviroEffects/>
                 </Box> 
               </div>   
+            
+
+
+            <div style={{paddingTop: '0px', marginBottom:'100px'}}>
+                <Box  className={classes.content}>              
+                <FooterBar/>
+                </Box> 
+              </div>   
             </div>
+
+            
                   
             </Container>       
         </Grid>

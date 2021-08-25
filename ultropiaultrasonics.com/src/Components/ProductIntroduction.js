@@ -62,22 +62,23 @@ function Content() {
 
   return (
     <div >
+        
         <Typography >
             <Typography variant="h4" className={classes.subheading} >
                 {/* <b>What is it?</b> */}
             </Typography>
 
             <Container>
-                <Paper className={classes.paper}>
+                <Paper className={classes.paper} style={{borderRadius:20}} elevation={5}>
                     <div className={classes.largeText} >
                         <Typography variant="h5">
                             <div style={{paddingBottom: '5px'}}>
                                 <strong><i>Say goodbye to your washer and dryer!</i></strong>
                             </div>
 
-                            The <i>Ultromatic</i> is a two-in-one washing and drying machine that uses
+                            The <i>Ultramatic</i> is a two-in-one washing and drying machine that uses
                             a high frequency ultrasonic emitter to clean, sanitize, and dry clothing
-                            faster and more efficent than ever possible before.
+                            faster and more efficient than ever possible before.
                         </Typography>
                         
                     </div>                    

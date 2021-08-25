@@ -78,9 +78,11 @@ export default function Control() {
     };
   return (
 
-    <ButtonGroup variant="contained" color="secondary" orientation="vertical" style={{ paddingBottom: 20}}>
-        <Button variant="contained" color="secondary" onClick={handleClickOpen}>
-        Get in Touch
+    <ButtonGroup fullWidth variant="contained" color="secondary" orientation="vertical"  >
+        <Button variant="contained" color="secondary" onClick={handleClickOpen} 
+         // style={{fontSize:16}}
+        >
+          Get in Touch
         </Button>
 
         <div className={classes.root}>
@@ -136,13 +138,12 @@ export default function Control() {
                 </ButtonGroup>
             </DialogActions>
         </Dialog>
-        <Button href='https://www.linkedin.com/company/ultropia/'>
+        <Button href='https://www.linkedin.com/company/ultropia/' 
+        // style={{fontSize:16}}
+        >
           About us
         </Button>
     </ButtonGroup>
         
   );
 }
-
-
-
