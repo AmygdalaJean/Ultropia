@@ -3,13 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper'
-import List from '@material-ui/core/List';
 import Button from '@material-ui/core/Button'
 import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
 import Container from '@material-ui/core/Container';
 import Logo from './Images/logosmall1.png'
-import { Typography } from '@material-ui/core';
 import Control from './Control';
 import {Link} from 'react-scroll'
 import ProductLinks from './ProductLinks'

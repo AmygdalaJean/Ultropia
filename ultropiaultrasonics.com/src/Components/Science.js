@@ -4,8 +4,12 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container'
 import Divider from '@material-ui/core/Divider'
 
-import ultrasonicCleaner from './Images/Filter_ultrasonic_cleaner.jpg'
-import ultradiagram from './Images/ultrasonic-diagram.webp'
+import dirty from './Images/dirtshirt.png'
+import soundwave from './Images/ultrawave.png'
+import exp from './Images/explosion.png'
+import time from './Images/time.png'
+import complex from './Images/glasses.png'
+import drying from './Images/shirt.png'
 import colddry from './Images/ultrasoniccolddrying.png'
 
 import "./../static/App.css";
@@ -66,9 +70,9 @@ function Science() {
                     </Typography>     
                 </Grid>
                 <Grid item xs={4}>
-                    {/* <div style={{paddingTop: '0px'}} >
-                        <img src={ultradiagram} className={classes.img}/>
-                    </div> */}
+                    <div  >
+                        <img src={dirty} className={classes.img}/>
+                    </div>
                 </Grid>
             </Grid>
 
@@ -76,9 +80,9 @@ function Science() {
 
             <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={4}>
-                    {/* <div style={{paddingTop: '0px'}} >
-                        <img src={ultradiagram} className={classes.img}/>
-                    </div> */}
+                    <div  >
+                        <img src={soundwave} className={classes.img}/>
+                    </div>
                 </Grid>
                 <Grid item xs={8}>   
                 
@@ -104,9 +108,9 @@ function Science() {
                 </Grid>
 
                 <Grid item xs={4}>
-                    {/* <div style={{paddingTop: '0px'}} >
-                        <img src={ultradiagram} className={classes.img}/>
-                    </div> */}
+                    <div  >
+                        <img src={exp} className={classes.img}/>
+                    </div>
                 </Grid>             
 
             </Grid>
@@ -115,9 +119,9 @@ function Science() {
 
             <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={4}>
-                    {/* <div style={{paddingTop: '0px'}} >
-                        <img src={ultradiagram} className={classes.img}/>
-                    </div> */}
+                    <div  >
+                        <img src={time} className={classes.img}/>
+                    </div>
                 </Grid>
                 <Grid item xs={8}>   
                 
@@ -144,9 +148,9 @@ function Science() {
                 </Grid>
 
                 <Grid item xs={4}>
-                    {/* <div style={{paddingTop: '0px'}} >
-                        <img src={ultradiagram} className={classes.img}/>
-                    </div> */}
+                    <div  >
+                        <img src={complex} className={classes.img}/>
+                    </div>
                 </Grid>             
 
             </Grid>
@@ -155,9 +159,9 @@ function Science() {
 
             <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={4}>
-                    {/* <div style={{paddingTop: '0px'}} >
-                        <img src={ultradiagram} className={classes.img}/>
-                    </div> */}
+                    <div  >
+                        <img src={drying} className={classes.img}/>
+                    </div>
                 </Grid>
                 <Grid item xs={8}>   
                 
@@ -210,7 +214,7 @@ function Science() {
                     </Typography>     
                 </Grid>
                 <Grid item xs={4}>
-                    <div style={{paddingTop: '0px'}} >
+                    <div  >
                         <img src={ultradiagram} className={classes.img}/>
                     </div>
                 </Grid>
@@ -220,7 +224,7 @@ function Science() {
 
             <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={4}>
-                    <div style={{paddingTop: '0px'}} >
+                    <div  >
                         <img src={ultradiagram} className={classes.img}/>
                     </div>
                 </Grid>
@@ -257,7 +261,7 @@ function Science() {
                     </Typography> 
                 </Grid>
                 <Grid item xs={4}>
-                    <div style={{paddingTop: '0px'}} >
+                    <div  >
                         <img src={ultradiagram} className={classes.img}/>
                     </div>
                 </Grid>
