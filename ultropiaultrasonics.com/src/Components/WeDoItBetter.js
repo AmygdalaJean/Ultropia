@@ -15,14 +15,24 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
       },
     cause: {
-      padding: theme.spacing(2),
-      textAlign: 'left',
-      margin:'50px',
-      marginLeft:'50px',
-      marginRight:'50px',
-      borderRadius: 400/ 2
+        [theme.breakpoints.up(1190)]: {
+            padding: theme.spacing(2),
+            textAlign: 'left',
+            margin:'50px',
+            marginLeft:'25px',
+            marginRight:'25px',
+            borderRadius: 400/ 2
+        },
+        [theme.breakpoints.down(1190)]: {
+            padding: theme.spacing(2),
+            textAlign: 'left',
+            margin:'50px',
+            marginLeft:'10px',
+            marginRight:'10px',
+            borderRadius: 400/ 2
+        }
     },
-    causeDiv: {
+    causeDiv: {        
         textAlign: 'center',
         padding: '75px',
         paddingTop: '12px',
@@ -30,7 +40,10 @@ const useStyles = makeStyles((theme) => ({
     },
     causeText: {
         fontSize:27,    
-        marginBottom:'20px'  
+        marginBottom:'20px',
+        [theme.breakpoints.down(900)]: {
+            fontSize:19,  
+        },
     },
     causeSubtitle: {
         fontSize:16,    
@@ -97,7 +110,7 @@ function WeDoItBetter() {
             <Grid container spacing={2}>
                 <Grid item xs={8}>
                     <div className={classes.causeDiv} style={{paddingRight:'60px', paddingLeft:'60px'}}>
-                        <Typography variant='h4' className={classes.causeText} style={{fontSize:26}}>
+                        <Typography variant='h4' className={classes.causeText} >
                             Sustainable energy goals are not being met, while 11% of the world are without electricity.
                         </Typography>
                         <Typography variant='subtitle2' className={classes.causeSubtitle}>

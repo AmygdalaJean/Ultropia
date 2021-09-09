@@ -12,6 +12,9 @@ import {Link} from 'react-scroll'
 import ProductLinks from './ProductLinks'
 import EnviroLinks from './EnviroLinks'
 
+import useWindowDimensions from './WindowSize';
+import GetInTouch from './GetInTouch';
+
 
 const drawerWidth = 240;
 
@@ -19,6 +22,16 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
+  // appBar: {
+  //   padding: theme.spacing(1),
+  //   [theme.breakpoints.down('sm')]: {
+  //     display:'false'
+  //   },
+  //   [theme.breakpoints.up('md')]: {
+  //     width: `calc(100% - ${drawerWidth}px)`,
+  //     marginLeft: drawerWidth,
+  //   },
+  // },
   appBar: {
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
@@ -47,48 +60,63 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+
+
 export default function PermanentDrawerLeft() {
   const classes = useStyles();
+  const { height, width } = useWindowDimensions();
+  
+  if (width > 1190) {
+    return (
+      <div className={classes.root}>
+        <CssBaseline />
+          <Drawer
+            className={classes.drawer}
+            variant="permanent"
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            anchor="left"
+          >
+            <Paper style={{paddingBottom:'40px',margin:'0px', float:'center', textAlign:'center'}} elevation={10}>
+            <Button fullWidth>
+              <Link 
+                activeClass="active"
+                to="Top"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={250}
+              >  
+                <img src={Logo} alt="Logo Here" style={{padding: 20, float:'center', height:'auto', width:'150px'}}/>  
+              </Link>
+            </Button>        
+  
+            <Control />     
+  
+          </Paper>  
+  
+          <Container style={{padding: 0, paddingTop: 50}}>
+            
+              <ProductLinks/>
+              <Divider style={{marginTop:'0px', marginBottom:'10px'}}/>
+  
+              <EnviroLinks/>
+              <Divider style={{marginTop:'0px', marginBottom:'50px'}}/>
+  
+          </Container>
+        </Drawer>
+      </div>
+    );
+  }
+  else {
+    return (
+      <div>
+        
+      </div>
+    )
+  }
+  
 
-  return (
-    <div className={classes.root}>
-      <CssBaseline />
-        <Drawer
-          className={classes.drawer}
-          variant="permanent"
-          classes={{
-            paper: classes.drawerPaper,
-          }}
-          anchor="left"
-        >
-          <Paper style={{paddingBottom:'40px',margin:'0px', float:'center', textAlign:'center'}} elevation={10}>
-          <Button fullWidth>
-            <Link 
-              activeClass="active"
-              to="Top"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={250}
-            >  
-              <img src={Logo} alt="Logo Here" style={{padding: 20, float:'center', height:'auto', width:'150px'}}/>  
-            </Link>
-          </Button>        
-
-          <Control />     
-
-        </Paper>  
-
-        <Container style={{padding: 0, paddingTop: 50}}>
-          
-            <ProductLinks/>
-            <Divider style={{marginTop:'0px', marginBottom:'10px'}}/>
-
-            <EnviroLinks/>
-            <Divider style={{marginTop:'0px', marginBottom:'50px'}}/>
-
-        </Container>
-      </Drawer>
-    </div>
-  );
+  
 }
