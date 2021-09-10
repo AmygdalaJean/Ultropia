@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from 'react-native'
+import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box'
 import EntryCard from "./Components/EntryCard"
 import VertBar from "./Components/VertBar"
@@ -41,7 +41,23 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  background:{
+    [theme.breakpoints.down(1190)]: {
+      width:'1190px', 
+      height:'auto', 
+      backgroundColor:'black', 
+      float:'right'
+    },
+    [theme.breakpoints.up(1190)]: {
+      width:'3840px', 
+      height:'auto', 
+      backgroundColor:'black', 
+      float:'right'
+    },
+
+  },
   paper: {
+
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
@@ -76,15 +92,16 @@ function App() {
         {width}
       </div>
       <div className={classes.root} id="Top">
-        <img src={bgImg} alt="The ultropia prototype" style={{
-          height: 'auto', 
-          width:'100%', 
-          maxWidth:'2200px',
-          minWidth:'1600px',
-          minHeight:'750px',
-          backgroundColor:'black',
-          float:'right',     
+        <Paper className={classes.background}>
+          <img src={bgImg} alt="The ultropia prototype" style={{
+              height: 'auto', 
+              width:'100%', 
+              maxWidth:'2200px',
+              minWidth:'1600px',
+              minHeight:'750px',
+              float:'right',     
           }}/>
+        </Paper>
           <Grid container spacing={3} style={{minWidth:'750px'}}>
           
             <VertBar/>         

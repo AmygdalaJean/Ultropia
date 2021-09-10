@@ -23,9 +23,15 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '15px',
     },
     tableItem: {
-        padding: '65px',
-        paddingTop: '50px',
-        paddingBottom: '50px',
+        [theme.breakpoints.down(800)]: {
+            padding:'25px'
+        },
+        [theme.breakpoints.up(800)]: {
+            padding: '65px',
+            paddingTop: '50px',
+            paddingBottom: '50px',
+
+        },
         textAlign: 'center',
         fontSize:23
     },

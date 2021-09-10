@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container'
 import Divider from '@material-ui/core/Divider'
 
-import dirty from './Images/dirtshirt.png'
+import dirty from './Images/dirtshirt1.png'
 import soundwave from './Images/ultrawave.png'
 import exp from './Images/explosion.png'
 import time from './Images/time.png'
@@ -33,15 +33,32 @@ const useStyles = makeStyles((theme) => ({
     subContainer: {
         paddingTop: '25px',
         paddingBottom: '25px',
+        textAlign:'center',
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        padding: theme.spacing(3, 2),
+        height: 250,
     },
     img: {
-        width: '100%',
+        width: '75%',
         maxWidth: '300px',
         height: 'auto',
         float: 'center',
+        
+    },
+    beforeimg:{
+
     },
     scienceText: {
-        fontSize: 24
+        [theme.breakpoints.up(915)]:{
+            fontSize: 24,
+        },
+        [theme.breakpoints.down(915)]: {
+            fontSize: 20,
+        }
+        
+        
     },
     div: {
         marginTop:'50px',
@@ -70,7 +87,7 @@ function Science() {
                     </Typography>     
                 </Grid>
                 <Grid item xs={4}>
-                    <div  >
+                    <div  className={classes.beforeimg}>
                         <img src={dirty} className={classes.img}/>
                     </div>
                 </Grid>
@@ -80,7 +97,7 @@ function Science() {
 
             <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={4}>
-                    <div  >
+                    <div   className={classes.beforeimg}>
                         <img src={soundwave} className={classes.img}/>
                     </div>
                 </Grid>
@@ -108,7 +125,7 @@ function Science() {
                 </Grid>
 
                 <Grid item xs={4}>
-                    <div  >
+                    <div   className={classes.beforeimg}>
                         <img src={exp} className={classes.img}/>
                     </div>
                 </Grid>             
@@ -119,7 +136,7 @@ function Science() {
 
             <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={4}>
-                    <div  >
+                    <div   className={classes.beforeimg}>
                         <img src={time} className={classes.img}/>
                     </div>
                 </Grid>
@@ -148,7 +165,7 @@ function Science() {
                 </Grid>
 
                 <Grid item xs={4}>
-                    <div  >
+                    <div   className={classes.beforeimg}>
                         <img src={complex} className={classes.img}/>
                     </div>
                 </Grid>             
@@ -159,7 +176,7 @@ function Science() {
 
             <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={4}>
-                    <div  >
+                    <div  className={classes.beforeimg} >
                         <img src={drying} className={classes.img}/>
                     </div>
                 </Grid>
@@ -190,8 +207,8 @@ function Science() {
                 </Grid>
 
                 <Grid item xs={5}>
-                    <div style={{paddingTop: '0px', float:'center'}} >
-                        <img src={colddry} className={classes.img}/>
+                    <div  className={classes.beforeimg} >
+                        <img src={colddry} className={classes.img} style={{width:'100%'}}/>
                     </div>
                 </Grid>             
 
