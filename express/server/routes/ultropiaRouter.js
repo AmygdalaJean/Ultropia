@@ -38,6 +38,9 @@ router.get('/:id', getHuman, (req, res) => {
 })
 
 router.delete('/:id', getHuman, async (req, res) => {
+  if (res.inData == 'ALL'){
+    
+  }
   try {
     await res.inData.remove()
     res.json({message: 'Email Removed'})
