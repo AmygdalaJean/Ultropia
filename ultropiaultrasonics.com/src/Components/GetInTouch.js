@@ -38,7 +38,6 @@ export default function GetInTouch() {
     const [open, setOpen] = React.useState(false);
     const [openResp, setOpenResp] = React.useState(false);
     
-
     const handleResp = () => {
         setOpenResp(true)
       };
@@ -62,11 +61,24 @@ export default function GetInTouch() {
     }; 
 
     const handleSubmit = (event) => {
-        handleResp()
-        axios.post('http://localhost:3001/ultropia', {email: inMail, note: inNote})
-        console.log(inMail)
-        console.log(inNote)
-        handleClose()
+        
+        if (inMail != "")
+        {
+          handleResp()
+          axios.post('http://localhost:3001/ultropia', {email: inMail, note: inNote})
+          console.log(inMail)
+          console.log(inNote)
+          setTimeout(function (){
+
+            handleClose()
+          
+          }, 1000);
+        }
+        else
+        {
+          
+        }
+
     };
 
     const handleChangeEmail = (event) => {
@@ -80,27 +92,31 @@ export default function GetInTouch() {
 
     // <ButtonGroup fullWidth variant="contained" color="secondary" orientation="vertical"  >
     <div>
-        <Button fullWidth variant="contained" color="secondary" orientation="vertical"  onClick={handleClickOpen} 
+        <Button disableElevation fullWidth variant="contained" color="secondary" orientation="vertical"  onClick={handleClickOpen} 
          // style={{fontSize:16}}
         >
           Get in Touch
         </Button>
 
         <div className={classes.root}>
-            <Snackbar open={openResp} autoHideDuration={3000} onClose={handleExitResp}
-                        anchorOrigin={{
-                        vertical: 'center',
-                        horizontal: 'center',
-                    }}>
-                <Alert onClose={handleExitResp} severity="success">
-                    Thank you!
-                </Alert>
-            </Snackbar>
+
         </div>
 
         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
             <DialogTitle id="form-dialog-title">Interested?</DialogTitle>
             <DialogContent>
+            <Snackbar open={openResp} autoHideDuration={1000} onClose={handleExitResp}
+                        anchorOrigin={{
+                        vertical: 'center',
+                        horizontal: 'center',
+                    }}>
+                <Alert  onClose={handleExitResp} severity="success" style={{    display: 'flex',}}>
+                    Thank you!
+                </Alert>
+                {/* <Alert onClose={handleError} severity="">
+                    Thank you!
+                </Alert> */}
+            </Snackbar>
                 <DialogContentText>
                     Want to show your support and follow the project? 
                     Join our mailing list to get periodic updates! 

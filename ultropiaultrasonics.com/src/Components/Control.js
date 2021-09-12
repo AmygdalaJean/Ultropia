@@ -4,9 +4,6 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 import GetInTouch from './GetInTouch';
 
-import axios from 'axios'
-
-
 
 
 export default function Control() {
@@ -15,9 +12,7 @@ export default function Control() {
 
     <ButtonGroup fullWidth variant="contained" color="secondary" orientation="vertical"  >
         <GetInTouch/>
-        <Button href='https://www.linkedin.com/company/ultropia/' 
-        // style={{fontSize:16}}
-        >
+        <Button href='https://www.linkedin.com/company/ultropia/'  >
           About us
         </Button>
     </ButtonGroup>

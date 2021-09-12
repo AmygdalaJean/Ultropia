@@ -13,7 +13,6 @@ import ProductLinks from './ProductLinks'
 import EnviroLinks from './EnviroLinks'
 
 import useWindowDimensions from './WindowSize';
-import GetInTouch from './GetInTouch';
 
 
 const drawerWidth = 240;
@@ -46,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor:'gold'
+    backgroundColor: [theme.palette.secondary.main]
 
   },
   toolbar: theme.mixins.toolbar,

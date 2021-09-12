@@ -1,8 +1,7 @@
 import React from "react";
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
+import { Button, ButtonGroup } from "@material-ui/core";
 import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+import GetInTouch from "./GetInTouch";
 
 import Logo from './Images/ultropia2.png'
 
@@ -20,9 +19,10 @@ const useStyles = makeStyles((theme) => ({
     logostyle:{
         width:'100%', 
         alignSelf:'center', 
-        padding:'25px',
+        padding:'45px',
         paddingLeft:'100px',
-        paddingRight:'100px'
+        paddingRight:'100px',
+        paddingBottom:'0px',
     }, 
 
 }));
@@ -37,7 +37,22 @@ function EntryCard() {
         
             <Paper style={{borderRadius:400/2, maxWidth:'1000px', alignSelf:'center'}}>
                 <img src={Logo} className={classes.logostyle}/>
+                <div style={{textAlign:'center', paddingBottom:'10px', paddingTop:'0px'}}>
+                    <ButtonGroup    >
+                        <div style={{textAlign:'left', paddingRight:'200px'}}>
+                            <GetInTouch />
+                        </div>
+                        <div style={{textAlign:'right'}}>
+                            <Button disableElevation  variant="contained" color="secondary" orientation="horizontal"  href='https://www.linkedin.com/company/ultropia/' 
+                            >
+                                About us
+                            </Button>
+                        </div>
+                    </ButtonGroup>
+                </div>
             </Paper>
+
+
 
         </div>
 

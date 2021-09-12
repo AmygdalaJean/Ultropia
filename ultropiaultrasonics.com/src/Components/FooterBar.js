@@ -10,12 +10,7 @@ import GetInTouch from "./GetInTouch";
 
 import "./../static/App.css";
 
-let inMail = ""
-let inNote = ""
 
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-  }
   
   const useStyles = makeStyles((theme) => ({
     paper: {
@@ -51,8 +46,7 @@ function FooterBar() {
                             <Typography variant='h6' style={{textAlign:'center', paddingBottom:'25px'}}>
                                 Find more information about us here!
                             </Typography>
-                            <Button fullWidth color='secondary' variant='contained' href='https://www.linkedin.com/company/ultropia/' 
-                     
+                            <Button  disableElevation fullWidth color='secondary' variant='contained' href='https://www.linkedin.com/company/ultropia/' 
                             >
                                 About us
                             </Button>
@@ -69,7 +63,6 @@ function FooterBar() {
                 </Grid>
             </div>
         </Paper>
-            
 
         
     </div>

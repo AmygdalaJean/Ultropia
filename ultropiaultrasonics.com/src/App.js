@@ -23,7 +23,12 @@ import "./static/App.css";
 const custTheme = createTheme({
   palette: {
     primary: grey,
-    secondary: amber
+    secondary: {
+      light: '#ffeb3b',
+      main: '#ffc107',
+      dark: '#dead4e',
+      contrastText: '#000',
+    },
   },
   breakpoints: {
     values: {
@@ -52,7 +57,8 @@ const useStyles = makeStyles((theme) => ({
       width:'3840px', 
       height:'auto', 
       backgroundColor:'black', 
-      float:'right'
+      float:'right',
+      minWidth:'750px'
     },
 
   },
@@ -65,7 +71,8 @@ const useStyles = makeStyles((theme) => ({
   overlay: {
     [theme.breakpoints.down(1190)]: {
       position: 'absolute', left: '50%', top: '25%',
-      transform: 'translate(-50%, -25%)'
+      transform: 'translate(-50%, -25%)',
+      minWidth:'800px'
     },
     [theme.breakpoints.up(1190)]: {
       position: 'absolute', left: '60%', top: '25%',
@@ -75,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
  },
   content: {
     width: '100%',
-    backgroundColor: 'gold',
+    backgroundColor: [custTheme.palette.secondary.main],
     marginTop: '100px',
     padding: '25px',
     borderRadius: 80/ 2
