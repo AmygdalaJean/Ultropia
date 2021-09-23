@@ -14,11 +14,21 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
       },
     paper: {
-      padding: theme.spacing(2),
-      margin: '100px',
-      marginTop:'50px',
-      marginBottom:'0px',
-      backgroundColor: 'gold',
+        [theme.breakpoints.up(750)]: {
+            padding: theme.spacing(2),
+            margin: '100px',
+            marginTop:'50px',
+            marginBottom:'0px',
+            backgroundColor: 'gold',
+        },
+        [theme.breakpoints.down(750)]: {
+            padding: theme.spacing(2),
+            margin: '5px',
+            marginTop:'50px',
+            marginBottom:'0px',
+            backgroundColor: 'gold',
+        }
+
     },
     listItem: {
         paddingTop: '25px',
@@ -89,32 +99,6 @@ function Content() {
             
 
 
-          {/* <Grid container spacing={2}>
-            <Grid item xs={6}>     
-                <Typography variant="h6" className={classes.topText}>      
-                    
-                    <div className={classes.listItem} >
-                        <div style={{paddingBottom: '5px'}}>
-                            <strong><i>Say goodbye to your washer and dryer!</i></strong>
-                        </div>
-
-                        The <i>Ultromat</i> is a two-in-one washing and drying machine that uses
-                        a high frequency ultrasonic emitter to clean, sanitize, and dry clothing
-                        faster and more efficent than ever possible before.
-                    </div>
-
-                    <div className={classes.listItem} >
-                        Spend less time doing clothes! Spend less money on electricity and water! 
-                        The Ultramat can finally replace your old outdated washing machine that was
-                        designed in the 70s, and update how we all wash our clothes.
-                    </div>
-
-                </Typography>      
-            </Grid>
-            <Grid item xs={6}>
-                <img src={prototypeDiagram} style={{ alignSelf: 'center'}}/>
-            </Grid>
-        </Grid> */}
     </Typography>
 
     </div>

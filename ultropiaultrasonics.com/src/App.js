@@ -19,6 +19,9 @@ import useWindowDimensions from './Components/WindowSize';
 
 import "./static/App.css";
 
+
+
+
 const custTheme = createTheme({
   palette: {
     primary: grey,
@@ -49,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'auto', 
     width:'100%', 
     maxWidth:'2200px',
-    minWidth:'1600px',
+    minWidth:'1000px',
     float:'right',  
 
 
@@ -59,10 +62,10 @@ const useStyles = makeStyles((theme) => ({
       width:'1190px', 
       height:'auto', 
       backgroundColor:'black', 
-      float:'left'
+      float:'right'
     },
     [theme.breakpoints.down(750)]: {
-      width:'750px', 
+      width:'100%', 
       height:'auto', 
       backgroundColor:'black', 
       float:'left'
@@ -84,8 +87,8 @@ const useStyles = makeStyles((theme) => ({
   },
   overlay: {
     [theme.breakpoints.down(1190)]: {
-      position: 'absolute', left: '50%', top: '25%',
-      transform: 'translate(-50%, -25%)',
+      position: 'absolute', left: '50%', top: '15%',
+      transform: 'translate(-50%, -15%)',
       minWidth:'800px'
     },
     [theme.breakpoints.up(1190)]: {
@@ -93,18 +96,28 @@ const useStyles = makeStyles((theme) => ({
       transform: 'translate(-55%, -25%)'
     },    
     [theme.breakpoints.down(750)]: {
-      position: 'absolute', left: '50%', top: '15%',
-      transform: 'translate(-50%, -15%)',
+      position: 'absolute', left: '50%', top: '10%',
+      transform: 'translate(-50%, -10%)',
       minWidth:'200px'
     },
 
  },
   content: {
-    width: '100%',
-    backgroundColor: [custTheme.palette.secondary.main],
-    marginTop: '100px',
-    padding: '25px',
-    borderRadius: 80/ 2
+    [theme.breakpoints.up(750)]: {
+      width: '100%',
+      backgroundColor: [custTheme.palette.secondary.main],
+      marginTop: '100px',
+      padding: '25px',
+      borderRadius: 80/ 2
+    },
+    [theme.breakpoints.down(750)]: {
+      width: '100%',
+      backgroundColor: [custTheme.palette.secondary.main],
+      marginTop: '25px',
+      padding: '0px',
+      borderRadius: 80/ 2
+    },
+
   },
 }));
 

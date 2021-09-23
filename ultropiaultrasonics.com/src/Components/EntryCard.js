@@ -63,11 +63,10 @@ function EntryCard() {
     else {
         return ( 
             <div className={classes.root}>
-                <Paper style={{borderRadius:25, width:'100%', alignSelf:'center'}}>
+                <Paper style={{ borderRadius:25, width:'100%', alignSelf:'center'}}>
                     <img src={Logo} className={classes.logostyle} alt="Ultropia"/>
                     <div style={{textAlign:'center', paddingTop:'0px'}}>
-                        
-
+                    
                     </div>
                 </Paper>   
                 <Paper style={{borderRadius:25,  width:'100%', alignSelf:'center', textAlign:'center'}}>

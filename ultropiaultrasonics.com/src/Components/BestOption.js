@@ -51,7 +51,8 @@ function Content() {
                   we need. 
               </div>
               <div className={classes.callText}>
-                e
+                Stay up to date with us! Follow us on <a href="" target="_blank">LinkedIn</a>,
+                sign up for our newsletter! 
               </div>
             </Typography>
         </Paper>

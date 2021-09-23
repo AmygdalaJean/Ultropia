@@ -28,16 +28,24 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '15px',
     },
     tableItem: {
+        padding: '65px',
+        paddingLeft: '30px',
+        paddingRight: '30px',
+        textAlign: 'center',
+
         [theme.breakpoints.down(800)]: {
             fontSize:20
         },
         [theme.breakpoints.up(800)]: {
             fontSize:23
         },
-        padding: '65px',
-        paddingLeft: '30px',
-        paddingRight: '30px',
-        textAlign: 'center',
+        [theme.breakpoints.down(600)]: {
+            fontSize:18,
+            padding:'5px',
+            margin:'5px'
+        },
+        
+
  
     },
     subheading: {
@@ -45,13 +53,28 @@ const useStyles = makeStyles((theme) => ({
         textAlign:'center'
     },
     paper: {
-        margin:'30px',
-        height:'300px',
-        textAlign:'center',
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        padding: theme.spacing(3, 2),
+        [theme.breakpoints.up(750)]: {
+            margin:'30px',
+            height:'300px',
+            textAlign:'center',
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            padding: theme.spacing(3, 2),
+            marginTop:'0px'
+        },
+        [theme.breakpoints.down(750)]: {
+            margin:'5px',
+            height:'300px',
+            textAlign:'center',
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            padding: theme.spacing(3, 2),
+            marginTop:'0px'
+        },
+        
+
     }
 }));
 
@@ -65,7 +88,7 @@ function Content() {
             {/* <b>What Does it Do?</b> */}
         </Typography>
            
-          <Grid container spacing={2} className={classes.subcontainer} >
+          <Grid container spacing={2}  >
             <Grid item xs={6} >  
                 <Paper className={classes.paper} elevation={5} style={{borderRadius:20}}> 
                     <Typography variant="h5" className={classes.tableItem} >      

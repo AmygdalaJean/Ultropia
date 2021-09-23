@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     tableItem: {
         padding: '85px',
         textAlign: 'center',
+        
     },
     subheading: {
         paddingTop: '75px',
@@ -39,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         padding: theme.spacing(3, 2),
         height: 250,
+
     },
     img: {
         width: '75%',
