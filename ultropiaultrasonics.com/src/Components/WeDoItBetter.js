@@ -58,7 +58,8 @@ function WeDoItBetter() {
         <Paper className={classes.cause} elevation={5} style={{marginLeft:'25px'}}>
             <Grid container spacing={2}>
                 <Grid item xs={4}>
-                    <img src={dryingriver} style={{width:'200px', height:'200px', borderRadius:400/2, float:'left'}}/>
+                    <img src={dryingriver} style={{width:'200px', height:'200px', borderRadius:400/2, float:'left'}}
+                    alt="dried river"/>
                 </Grid>
                 <Grid item xs={8}>
                     <div className={classes.causeDiv}>
@@ -85,14 +86,16 @@ function WeDoItBetter() {
                     </div>
                 </Grid>
                 <Grid item xs={4}>
-                    <img src={badwater} style={{width:'200px', height:'200px', borderRadius:400/2, float:'right'}}/>
+                    <img src={badwater} style={{width:'200px', height:'200px', borderRadius:400/2, float:'right'}}
+                    alt="unclean drinking water"/>
                 </Grid>
             </Grid>
         </Paper>
         <Paper className={classes.cause} elevation={5} style={{marginLeft:'25px'}}>
             <Grid container spacing={2}>
                 <Grid item xs={4}>
-                    <img src={waterwalk} style={{width:'200px', height:'200px', borderRadius:400/2, float:'left'}}/>
+                    <img src={waterwalk} style={{width:'200px', height:'200px', borderRadius:400/2, float:'left'}}
+                    alt="A long walk for water"/>
                 </Grid>
                 <Grid item xs={8}>
                     <div className={classes.causeDiv}>
@@ -119,7 +122,8 @@ function WeDoItBetter() {
                     </div>
                 </Grid>
                 <Grid item xs={4}>
-                    <img src={coalpower} style={{width:'200px', height:'200px', borderRadius:400/2, float:'right'}}/>
+                    <img src={coalpower} style={{width:'200px', height:'200px', borderRadius:400/2, float:'right'}}
+                    alt="Polution from Factories"/>
                 </Grid>
             </Grid>
         </Paper>

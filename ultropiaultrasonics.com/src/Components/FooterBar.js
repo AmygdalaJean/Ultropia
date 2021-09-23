@@ -3,7 +3,6 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
-import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
 
 import GetInTouch from "./GetInTouch";
@@ -38,7 +37,7 @@ function FooterBar() {
             <div style={{paddingLeft:'65px', paddingRight:'65px', textAlign:'center'}}>
                 <Typography variant='h4' style={{textAlign:'center'}}>
                     <div>Questions? Comments?</div>
-                    <div>What to get in touch?</div>
+                    <div>Want to get in touch?</div>
                 </Typography>
                 <Grid container spacing={4} style={{paddingTop:'25px'}}>
                     <Grid item xs={6} style={{textAlign:'left'}}>

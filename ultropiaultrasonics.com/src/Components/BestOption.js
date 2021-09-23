@@ -40,19 +40,19 @@ function Content() {
                   </Typography>
                 </div>
                 <div className={classes.callText}>
-                  The future demands a better way to clean our clothes. Traditional washing machines 
-                  are inefficient and outdated, they properly solve neither the problems 
+                  The future requires a better way to clean our clothes. Traditional washing machines 
+                  are inefficient and outdated, and neither solve the problems 
                   of today, or tomorrow. 
                 </div>
                 <div className={classes.callText}>
-                  <b>Ultrasonics is the answer, and the Ultramatic is its 
+                  <b>Ultropia is the answer, and the Ultramatic is its 
                   vehicle</b>. Using less water, less energy, less space. Easier to 
                   travel with, to use, to rely on, the Ultramatic is the solution that 
                   we need. 
-                </div>
-                <div className={classes.callText}>
-                  
-                </div>
+              </div>
+              <div className={classes.callText}>
+                e
+              </div>
             </Typography>
         </Paper>
     </div>

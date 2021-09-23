@@ -21,16 +21,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
-  // appBar: {
-  //   padding: theme.spacing(1),
-  //   [theme.breakpoints.down('sm')]: {
-  //     display:'false'
-  //   },
-  //   [theme.breakpoints.up('md')]: {
-  //     width: `calc(100% - ${drawerWidth}px)`,
-  //     marginLeft: drawerWidth,
-  //   },
-  // },
   appBar: {
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,

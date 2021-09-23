@@ -1,14 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
 import { Typography } from '@material-ui/core';
 import {Link} from 'react-scroll'
 import Button from '@material-ui/core/Button'
 import Paper from '@material-ui/core/Paper'
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 
-const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
     button: {

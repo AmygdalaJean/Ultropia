@@ -1,6 +1,5 @@
 import React from "react";
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container'
 import Paper from '@material-ui/core/Paper'
 
@@ -84,7 +83,7 @@ function Content() {
                     </div>                    
                 </Paper>
                 <div style={{ textAlign:'center' }}>
-                    <img src={prototypeDiagram} />
+                    <img src={prototypeDiagram} alt="Diagram of the current Prototype"/>
                 </div>
             </Container>
             

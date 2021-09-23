@@ -81,14 +81,15 @@ function Science() {
                 <Grid item xs={8}>   
                     <Typography variant="subtitle2" className={classes.topText}>  
                         <div className={classes.scienceText}>    
-                            <a href="https://en.wikipedia.org/wiki/Ultrasonic_cleaning" target='_blank'>Ultrasonic Cleaning</a> is 
+                            <a href="https://en.wikipedia.org/wiki/Ultrasonic_cleaning" target='_blank' rel="noreferrer" >Ultrasonic Cleaning</a> is 
                             the practice of blasting dirty items with ultrasonic high frequency waves. 
                         </div>
                     </Typography>     
                 </Grid>
                 <Grid item xs={4}>
                     <div  className={classes.beforeimg}>
-                        <img src={dirty} className={classes.img}/>
+                        <img src={dirty} className={classes.img} 
+                        alt="Dirty shirt."/>
                     </div>
                 </Grid>
             </Grid>
@@ -98,7 +99,8 @@ function Science() {
             <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={4}>
                     <div   className={classes.beforeimg}>
-                        <img src={soundwave} className={classes.img}/>
+                        <img src={soundwave} className={classes.img}
+                        alt="An artistic rendering of sound waves"/>
                     </div>
                 </Grid>
                 <Grid item xs={8}>   
@@ -118,15 +120,16 @@ function Science() {
                 <Grid item xs={8}>   
                     <Typography variant="subtitle2" className={classes.topText}>  
                         <div className={classes.scienceText}>    
-                            It is the collapse of these vacuums that knocks loose dirt, 
-                            kill bacteria, and viruses. This quickly cleans and sanitizes any item. 
+                            When these vacuums collapse it knocks loose dirt and
+                            kills bacteria and viruses. This quickly cleans and sanitizes any item. 
                         </div>
                     </Typography>     
                 </Grid>
 
                 <Grid item xs={4}>
                     <div   className={classes.beforeimg}>
-                        <img src={exp} className={classes.img}/>
+                        <img src={exp} className={classes.img}
+                        alt="An explosion, sanitizes viruses"/>
                     </div>
                 </Grid>             
 
@@ -137,7 +140,8 @@ function Science() {
             <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={4}>
                     <div   className={classes.beforeimg}>
-                        <img src={time} className={classes.img}/>
+                        <img src={time} className={classes.img}
+                        alt="A ticking clock"/>
                     </div>
                 </Grid>
                 <Grid item xs={8}>   
@@ -166,7 +170,8 @@ function Science() {
 
                 <Grid item xs={4}>
                     <div   className={classes.beforeimg}>
-                        <img src={complex} className={classes.img}/>
+                        <img src={complex} className={classes.img}
+                        alt="Frigile and high-tech glasses"/>
                     </div>
                 </Grid>             
 
@@ -177,7 +182,8 @@ function Science() {
             <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={4}>
                     <div  className={classes.beforeimg} >
-                        <img src={drying} className={classes.img}/>
+                        <img src={drying} className={classes.img}
+                        alt="Sound waves moving through a shirt"/>
                     </div>
                 </Grid>
                 <Grid item xs={8}>   
@@ -208,7 +214,8 @@ function Science() {
 
                 <Grid item xs={5}>
                     <div  className={classes.beforeimg} >
-                        <img src={colddry} className={classes.img} style={{width:'100%'}}/>
+                        <img src={colddry} className={classes.img} style={{width:'100%'}}
+                        alt="Detailed graph of different times to dry for different drying methods"/>
                     </div>
                 </Grid>             
 

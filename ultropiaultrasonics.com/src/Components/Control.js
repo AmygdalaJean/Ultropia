@@ -12,7 +12,7 @@ export default function Control() {
 
     <ButtonGroup fullWidth variant="contained" color="secondary" orientation="vertical"  >
         <GetInTouch/>
-        <Button href='https://www.linkedin.com/company/ultropia/'  >
+        <Button href='https://www.linkedin.com/company/ultropia/' target='_blank' rel="noreferrer" >
           About us
         </Button>
     </ButtonGroup>

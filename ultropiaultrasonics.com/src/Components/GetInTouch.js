@@ -62,7 +62,7 @@ export default function GetInTouch() {
 
     const handleSubmit = (event) => {
         
-        if (inMail != "")
+        if (inMail !== "")
         {
           handleResp()
           axios.post('http://localhost:3001/ultropia', {email: inMail, note: inNote})

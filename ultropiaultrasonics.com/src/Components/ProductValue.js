@@ -1,7 +1,6 @@
 import React from "react";
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper'
 
 import "./../static/App.css";
@@ -9,14 +8,20 @@ import "./../static/App.css";
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-    paper: {
-      padding: theme.spacing(2),
-      textAlign: 'left',
-    },
+
     listItem: {
         paddingTop: '25px',
         paddingBottom: '25px',
         textAlign: 'justify',
+    },
+    subcontainer: {
+        
+        textAlign:'center',
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        padding: theme.spacing(3, 2),
+        height: '350px'
     },
     horizontal: {
         marginTop: '15px',
@@ -24,16 +29,16 @@ const useStyles = makeStyles((theme) => ({
     },
     tableItem: {
         [theme.breakpoints.down(800)]: {
-            padding:'25px'
+            fontSize:20
         },
         [theme.breakpoints.up(800)]: {
-            padding: '65px',
-            paddingTop: '50px',
-            paddingBottom: '50px',
-
+            fontSize:23
         },
+        padding: '65px',
+        paddingLeft: '30px',
+        paddingRight: '30px',
         textAlign: 'center',
-        fontSize:23
+ 
     },
     subheading: {
         paddingTop: '50px',
@@ -41,7 +46,12 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
         margin:'30px',
-        height:'85%',
+        height:'300px',
+        textAlign:'center',
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        padding: theme.spacing(3, 2),
     }
 }));
 
@@ -55,7 +65,7 @@ function Content() {
             {/* <b>What Does it Do?</b> */}
         </Typography>
            
-          <Grid container spacing={2} >
+          <Grid container spacing={2} className={classes.subcontainer} >
             <Grid item xs={6} >  
                 <Paper className={classes.paper} elevation={5} style={{borderRadius:20}}> 
                     <Typography variant="h5" className={classes.tableItem} >      

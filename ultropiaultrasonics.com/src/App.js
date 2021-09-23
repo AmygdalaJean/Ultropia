@@ -6,7 +6,6 @@ import VertBar from "./Components/VertBar"
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import grey from '@material-ui/core/colors/grey';
-import amber from '@material-ui/core/colors/amber';
 import AboutProduct from './Components/AboutProduct';
 import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
@@ -46,12 +45,27 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  backgroundimg:{
+    height: 'auto', 
+    width:'100%', 
+    maxWidth:'2200px',
+    minWidth:'1600px',
+    float:'right',  
+
+
+  },
   background:{
     [theme.breakpoints.down(1190)]: {
       width:'1190px', 
       height:'auto', 
       backgroundColor:'black', 
-      float:'right'
+      float:'left'
+    },
+    [theme.breakpoints.down(750)]: {
+      width:'750px', 
+      height:'auto', 
+      backgroundColor:'black', 
+      float:'left'
     },
     [theme.breakpoints.up(1190)]: {
       width:'3840px', 
@@ -77,6 +91,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up(1190)]: {
       position: 'absolute', left: '60%', top: '25%',
       transform: 'translate(-55%, -25%)'
+    },    
+    [theme.breakpoints.down(750)]: {
+      position: 'absolute', left: '50%', top: '15%',
+      transform: 'translate(-50%, -15%)',
+      minWidth:'200px'
     },
 
  },
@@ -95,21 +114,16 @@ function App() {
 
   return (
     <ThemeProvider theme={custTheme}>
+
       <div style={{textAlign:'right'}}>
         {width}
       </div>
+
       <div className={classes.root} id="Top">
         <Paper className={classes.background}>
-          <img src={bgImg} alt="The ultropia prototype" style={{
-              height: 'auto', 
-              width:'100%', 
-              maxWidth:'2200px',
-              minWidth:'1600px',
-              minHeight:'750px',
-              float:'right',     
-          }}/>
+          <img src={bgImg} alt="The ultropia prototype" className={classes.backgroundimg}/>
         </Paper>
-          <Grid container spacing={3} style={{minWidth:'750px'}}>
+          <Grid container spacing={3} style={{minWidth:'360px'}}>
           
             <VertBar/>         
           
