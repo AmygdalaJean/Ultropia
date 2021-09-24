@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme) => ({
       }
 }));
 
-export default function ProductLinks() {
-  const classes = useStyles();
+export default function ProductLinks(props) {
+    const classes = useStyles();
 
   return (
     <div style={{ textAlign:'center'}}>
@@ -23,7 +23,7 @@ export default function ProductLinks() {
                 <b>THE ULTRAMATIC</b>
             </Typography>
             <ButtonGroup fullWidth variant="contained" color="secondary" orientation="vertical" style={{paddingTop:'10px'}} >
-            <Button>            
+            <Button >            
                 <Link
                 activeClass="active"
                 to="UltramaticIntro"

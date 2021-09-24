@@ -15,6 +15,7 @@ import EnviroEffects from './Components/EnviroEffects'
 import FooterBar from './Components/FooterBar'
 
 import useWindowDimensions from './Components/WindowSize';
+import ResponsiveVertBar from './Components/ResponsiveVertBar';
 
 
 import "./static/App.css";
@@ -92,8 +93,8 @@ const useStyles = makeStyles((theme) => ({
       minWidth:'800px'
     },
     [theme.breakpoints.up(1190)]: {
-      position: 'absolute', left: '60%', top: '25%',
-      transform: 'translate(-55%, -25%)'
+      position: 'absolute', left: '50%', top: '25%',
+      transform: 'translate(-50%, -25%)'
     },    
     [theme.breakpoints.down(750)]: {
       position: 'absolute', left: '50%', top: '10%',
@@ -126,11 +127,13 @@ function App() {
   const { height, width } = useWindowDimensions();
 
   return (
-    <ThemeProvider theme={custTheme}>
+    <ThemeProvider theme={custTheme} >
 
       {/* <div style={{textAlign:'right'}}>
         {width}
       </div> */}
+            <VertBar/>         
+
 
       <div className={classes.root} id="Top">
         <Paper className={classes.background}>
@@ -138,7 +141,8 @@ function App() {
         </Paper>
           <Grid container spacing={3} style={{minWidth:'360px'}}>
           
-            <VertBar/>         
+
+           
           
             <Container maxWidth="md" className={classes.overlay}>    
                   
