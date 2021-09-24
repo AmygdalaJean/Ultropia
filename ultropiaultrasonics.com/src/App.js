@@ -128,9 +128,9 @@ function App() {
   return (
     <ThemeProvider theme={custTheme}>
 
-      <div style={{textAlign:'right'}}>
+      {/* <div style={{textAlign:'right'}}>
         {width}
-      </div>
+      </div> */}
 
       <div className={classes.root} id="Top">
         <Paper className={classes.background}>
