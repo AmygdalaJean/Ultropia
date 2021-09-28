@@ -58,10 +58,14 @@ const useStyles = makeStyles((theme) => ({
         alignSelf: 'center',
     },
     largeText: {
+
         padding: '50px',
         paddingTop: '20px',
         paddingBottom: '20px',
         textAlign: 'center',
+        [theme.breakpoints.down(600)]: {
+            padding:'10px',
+        },
     },
 
 }));

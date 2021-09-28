@@ -13,10 +13,11 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import { Typography } from '@material-ui/core';
 import { ButtonGroup } from '@material-ui/core';
 
-import arrowimg from './Images/arrowv2.png'
+import arrowimg from './Images/fast-forward.png'
 
 
 import useWindowDimensions from './WindowSize';
+import { HeightRounded } from '@mui/icons-material';
 
 
 const drawerWidth = 65;
@@ -24,9 +25,7 @@ const drawerWidth = 65;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height:'100%'
+
   },
   appBar: {
     [theme.breakpoints.up('sm')]: {
@@ -55,7 +54,10 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   button: {
-
+    '&:hover': {
+      backgroundColor: '#fff',
+      color: '#3c52b2',
+  },
   },
   newDrawer:{
     height:'100%',
@@ -63,14 +65,30 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-  }
+  },
+  clickable:{
+    paddingTop:'100px',
+    width:'100%',
+
+  },
+  clickableContainer:{
+    height:'100%',
+    flexGrow: 1, 
+    justifyContent:'center', 
+    alignItems: 'center'
+  },
 }));
 
 
 
 export default function PermanentDrawerLeft() {
-  const classes = useStyles();
   const { height, width } = useWindowDimensions();
+  const classes = useStyles();
+
+  const paperContainerStyle = (height) => ({
+    paddingBottom: 100 + (height / 2) - 350,
+    paddingTop: (height / 2) - 350,
+  });
 
   const [state, setState] = React.useState({
     top: false,
@@ -261,40 +279,48 @@ export default function PermanentDrawerLeft() {
       <div className={classes.root}>
         <CssBaseline />
 
-
-          <Drawer
-            className={classes.drawer}
-            variant="permanent"
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            anchor="left"
-            onClick={toggleDrawer('left', true)}
-            onClose={toggleDrawer('left', false)}
-            role="presentation"
-            onKeyDown={toggleDrawer('left', false)}
-          >
-            <React.Fragment key={'left'}
-            >
-              <Button onClick={toggleDrawer('left', true)}>
-                <div >
-                  <img src={arrowimg} style={{height:'100%', width:'auto'}}/>
-                </div>
-                
-              </Button>
-              <SwipeableDrawer
+          <div className={classes.clickableContainer}>
+            <Drawer
+              className={classes.drawer}
+              variant="permanent"
+              classes={{
+                paper: classes.drawerPaper,
+              }}
               
-                anchor={'left'}
-                open={state['left']}
-                onClose={toggleDrawer('left', false)}
-                onOpen={toggleDrawer('left', true)}
+              anchor="left"
+              onClick={toggleDrawer('left', true)}
+              onClose={toggleDrawer('left', false)}
+              role="presentation"
+              onKeyDown={toggleDrawer('left', false)}
+            >
+              <React.Fragment key={'left'} 
               >
-                {list('left')}
-              </SwipeableDrawer>
-            </React.Fragment>
+                <Box  >
+                <Button variant='string' className={classes.button} onClick={toggleDrawer('left', true)} >
+                    <div className={classes.clickableContainer}>
+                      <Box style={paperContainerStyle(height)}>
+                        <img src={arrowimg} className={classes.clickable}/>
+                        <img src={arrowimg} className={classes.clickable}/>
+                        <img src={arrowimg} className={classes.clickable}/>
+                      </Box>
+                    </div>
+                  
+                </Button>
+                </Box>
+                <SwipeableDrawer
+                
+                  anchor={'left'}
+                  open={state['left']}
+                  onClose={toggleDrawer('left', false)}
+                  onOpen={toggleDrawer('left', true)}
+                >
+                  {list('left')}
+                </SwipeableDrawer>
+              </React.Fragment>
 
-          
-        </Drawer>
+            
+          </Drawer>
+        </div>
       </div>
     );
   }
