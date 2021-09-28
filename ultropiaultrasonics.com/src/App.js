@@ -15,9 +15,6 @@ import EnviroEffects from './Components/EnviroEffects'
 import FooterBar from './Components/FooterBar'
 
 import useWindowDimensions from './Components/WindowSize';
-import ResponsiveVertBar from './Components/ResponsiveVertBar';
-
-
 import "./static/App.css";
 
 
@@ -33,16 +30,6 @@ const custTheme = createTheme({
       contrastText: '#000',
     },
   },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 960,
-      lg: 1190,
-      xl: 1920,
-    },
-  },
-
 })
 
 const useStyles = makeStyles((theme) => ({
@@ -80,12 +67,8 @@ const useStyles = makeStyles((theme) => ({
     },
 
   },
-  paper: {
 
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
+
   overlay: {
     [theme.breakpoints.down(1190)]: {
       position: 'absolute', left: '50%', top: '15%',
@@ -106,14 +89,12 @@ const useStyles = makeStyles((theme) => ({
   content: {
     [theme.breakpoints.up(750)]: {
       width: '100%',
-      // backgroundColor: [custTheme.palette.secondary.main],
       marginTop: '100px',
       padding: '0px',
       borderRadius: 80/ 2
     },
     [theme.breakpoints.down(750)]: {
       width: '100%',
-      // backgroundColor: [custTheme.palette.secondary.main],
       marginTop: '25px',
       padding: '0px',
       borderRadius: 80/ 2
@@ -129,13 +110,7 @@ function App() {
   return (
       <div style={{height: '100%', backgroundColor: [custTheme.palette.secondary.main]}}>
       <ThemeProvider theme={custTheme} >
-
-        {/* <div style={{textAlign:'right'}}>
-          {width}
-        </div> */}
-              <VertBar/>         
-
-
+        <VertBar/>         
         <div className={classes.root} id="Top">
           <Paper className={classes.background}>
             <img src={bgImg} alt="The ultropia prototype" className={classes.backgroundimg}/>

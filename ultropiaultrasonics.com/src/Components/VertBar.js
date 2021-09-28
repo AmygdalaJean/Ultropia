@@ -54,10 +54,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   button: {
-    '&:hover': {
-      backgroundColor: '#fff',
-      color: '#3c52b2',
-  },
+
   },
   newDrawer:{
     height:'100%',
@@ -296,7 +293,7 @@ export default function PermanentDrawerLeft() {
               <React.Fragment key={'left'} 
               >
                 <Box  >
-                <Button variant='string' className={classes.button} onClick={toggleDrawer('left', true)} >
+                <Button variant='string' onClick={toggleDrawer('left', true)} >
                     <div className={classes.clickableContainer}>
                       <Box style={paperContainerStyle(height)}>
                         <img src={arrowimg} className={classes.clickable}/>
