@@ -106,14 +106,14 @@ const useStyles = makeStyles((theme) => ({
   content: {
     [theme.breakpoints.up(750)]: {
       width: '100%',
-      backgroundColor: [custTheme.palette.secondary.main],
+      // backgroundColor: [custTheme.palette.secondary.main],
       marginTop: '100px',
-      padding: '25px',
+      padding: '0px',
       borderRadius: 80/ 2
     },
     [theme.breakpoints.down(750)]: {
       width: '100%',
-      backgroundColor: [custTheme.palette.secondary.main],
+      // backgroundColor: [custTheme.palette.secondary.main],
       marginTop: '25px',
       padding: '0px',
       borderRadius: 80/ 2
@@ -127,60 +127,62 @@ function App() {
   const { height, width } = useWindowDimensions();
 
   return (
-    <ThemeProvider theme={custTheme} >
+      <div style={{height: '100%', backgroundColor: [custTheme.palette.secondary.main]}}>
+      <ThemeProvider theme={custTheme} >
 
-      {/* <div style={{textAlign:'right'}}>
-        {width}
-      </div> */}
-            <VertBar/>         
+        {/* <div style={{textAlign:'right'}}>
+          {width}
+        </div> */}
+              <VertBar/>         
 
 
-      <div className={classes.root} id="Top">
-        <Paper className={classes.background}>
-          <img src={bgImg} alt="The ultropia prototype" className={classes.backgroundimg}/>
-        </Paper>
-          <Grid container spacing={3} style={{minWidth:'360px'}}>
-          
-
-           
-          
-            <Container maxWidth="md" className={classes.overlay}>    
-                  
-              <EntryCard/>
-              
-            </Container>   
+        <div className={classes.root} id="Top">
+          <Paper className={classes.background}>
+            <img src={bgImg} alt="The ultropia prototype" className={classes.backgroundimg}/>
+          </Paper>
+            <Grid container spacing={3} style={{minWidth:'360px'}}>
             
-            <Container maxWidth="md" >    
-                  
-            <div >
-              <div id="UltramaticIntro">
-                <Box  className={classes.content}>              
-                  <AboutProduct />
-                </Box>
+
+            
+            
+              <Container maxWidth="md" className={classes.overlay}>    
+                    
+                <EntryCard/>
+                
+              </Container>   
+              
+              <Container maxWidth="md" >    
+                    
+              <div >
+                <div id="UltramaticIntro">
+                  <Box  className={classes.content}>              
+                    <AboutProduct />
+                  </Box>
+                </div>
+                
+                <div style={{paddingTop: '0px'}}>
+                  <Box  className={classes.content}>              
+                    <EnviroEffects/>
+                  </Box> 
+                </div>   
+              
+
+
+              <div style={{paddingTop: '0px', marginBottom:'100px'}}>
+                  <Box  className={classes.content}>              
+                  <FooterBar/>
+                  </Box> 
+                </div>   
               </div>
+
               
-              <div style={{paddingTop: '0px'}}>
-                <Box  className={classes.content}>              
-                  <EnviroEffects/>
-                </Box> 
-              </div>   
-            
-
-
-            <div style={{paddingTop: '0px', marginBottom:'100px'}}>
-                <Box  className={classes.content}>              
-                <FooterBar/>
-                </Box> 
-              </div>   
-            </div>
-
-            
-                  
-            </Container>       
-        </Grid>
-      </div>      
-    </ThemeProvider>
-      
+                    
+              </Container>       
+          </Grid>
+        </div>      
+      </ThemeProvider>
+    </div>
+        
   );
 }
 

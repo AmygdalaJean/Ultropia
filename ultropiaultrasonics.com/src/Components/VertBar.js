@@ -4,28 +4,29 @@ import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
-import Divider from '@material-ui/core/Divider';
-import Container from '@material-ui/core/Container';
 import Logo from './Images/logosmall1.png'
 import Control from './Control';
 import {Link} from 'react-scroll'
-import ProductLinks from './ProductLinks'
-import EnviroLinks from './EnviroLinks'
 
 import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import { Typography } from '@material-ui/core';
 import { ButtonGroup } from '@material-ui/core';
 
+import arrowimg from './Images/arrowv2.png'
+
 
 import useWindowDimensions from './WindowSize';
 
 
-const drawerWidth = 45;
+const drawerWidth = 65;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height:'100%'
   },
   appBar: {
     [theme.breakpoints.up('sm')]: {
@@ -37,11 +38,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: drawerWidth,
       flexShrink: 0,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height:'100%',
     },
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: [theme.palette.secondary.main]
 
   },
   toolbar: theme.mixins.toolbar,
@@ -52,6 +56,13 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
 
+  },
+  newDrawer:{
+    height:'100%',
+    backgroundColor: [theme.palette.secondary.main],
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 }));
 
@@ -81,18 +92,19 @@ export default function PermanentDrawerLeft() {
   };
 
   const list = (anchor) => (
-
+    <div className={classes.newDrawer}>
     <Box
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onClose={toggleDrawer(anchor, false)}
+      
     >
-      <Paper style={{paddingBottom:'40px',margin:'0px', float:'center', textAlign:'center'}} elevation={10} >
+      <Paper style={{paddingBottom:'40px',margin:'0px', float:'center', textAlign:'center'}} elevation={0} >
             <Button fullWidth>
               <Link 
                 activeClass="active"
-                
+                to="Top"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -103,16 +115,12 @@ export default function PermanentDrawerLeft() {
                 />  
               </Link>
             </Button>        
-  
-            <Control />     
-  
-          </Paper>  
-  
-          <Container style={{padding: 0, paddingTop: 50}}>
-            
-          <div style={{ textAlign:'center'}}>
-            <Paper style={{backgroundColor:'white', paddingBottom:'25px', paddingTop:'10px'}}>
-                  <Typography variant="button" style={{fontSize:16}}>
+            <div  style={{paddingBottom:'50px'}}>
+              <Control/>
+            </div>
+               
+            <div  style={{paddingBottom:'50px'}}>
+            <Typography variant="button" style={{fontSize:16}}>
                       <b>THE ULTRAMATIC</b>
                   </Typography>
                   <ButtonGroup fullWidth variant="contained" color="secondary" orientation="vertical" style={{paddingTop:'10px'}} >
@@ -173,14 +181,9 @@ export default function PermanentDrawerLeft() {
                       </Link>  
                   </Button>               
               </ButtonGroup>   
-                          
-              </Paper>
-            </div>
-              <Divider style={{marginTop:'0px', marginBottom:'10px'}}/>
-  
-              <div style={{ textAlign:'center'}}>
-        <Paper style={{backgroundColor:'white', paddingBottom:'25px', paddingTop:'10px'}}>
-            <Typography variant="button" style={{fontSize:16}}>
+              </div>
+                           
+              <Typography variant="button" style={{fontSize:16}}>
                 <b>Modern Sanitation</b>
             </Typography>
             <ButtonGroup fullWidth variant="contained" color="secondary" orientation="vertical" style={{paddingTop:'10px'}} >
@@ -227,14 +230,29 @@ export default function PermanentDrawerLeft() {
                 </Link>  
             </Button>                
         </ButtonGroup>          
-        </Paper>
+          </Paper>  
+  
+          {/* <Container style={{padding: 0, paddingTop: 50}}>
+            
+          <div style={{ textAlign:'center'}}>
+            <Paper style={{backgroundColor:'white', paddingBottom:'25px', paddingTop:'10px'}}>
+                  
+              </Paper>
+            </div>
+              <Divider style={{marginTop:'0px', marginBottom:'10px'}}/>
+  
+              <div style={{ textAlign:'center'}}>
+        <Paper style={{backgroundColor:'white', paddingBottom:'25px', paddingTop:'10px'}}>
+           
+        </Paper> */}
         
-        
+{/*         
     </div>
               <Divider style={{marginTop:'0px', marginBottom:'50px'}}/>
   
-          </Container> 
+          </Container>  */}
           </Box>
+          </div>
           
   );
   
@@ -258,7 +276,12 @@ export default function PermanentDrawerLeft() {
           >
             <React.Fragment key={'left'}
             >
-              <Button onClick={toggleDrawer('left', true)}>left</Button>
+              <Button onClick={toggleDrawer('left', true)}>
+                <div >
+                  <img src={arrowimg} style={{height:'100%', width:'auto'}}/>
+                </div>
+                
+              </Button>
               <SwipeableDrawer
               
                 anchor={'left'}
