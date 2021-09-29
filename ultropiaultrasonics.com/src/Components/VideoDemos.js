@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
     videoHeading: {
         padding:'20px',
         textAlign: 'center',
+        [theme.breakpoints.down(750)]: {
+            paddingTop:'50px',
+        },
     },
     img: {
         width: '100%',
@@ -39,7 +42,7 @@ function Demos() {
             <Grid container spacing={4} >
                 <Grid item xs={4} > 
                     <div className={classes.videoHeading} >
-                        <Typography variant="caption">
+                        <Typography variant="caption" >
                             Large ultrasonic washer removes all rust and grease from an old engine.
                         </Typography>
                     </div>
@@ -89,7 +92,7 @@ function Demos() {
       return (
           <div style={{padding:'20px'}} id="UltrasonicCleaning">
               <div className={classes.videoHeading} >
-                        <Typography variant="caption">
+                        <Typography variant="caption" style={{fontSize:16}}>
                             Large ultrasonic washer removes all rust and grease from an old engine.
                         </Typography>
                     </div>
@@ -101,7 +104,7 @@ function Demos() {
                         />
                     </div>
                     <div className={classes.videoHeading}>
-                        <Typography variant="caption">
+                        <Typography variant="caption" style={{fontSize:16}}>
                             Demonstration of both the speed and precision of an ultrasonic washer. 
                         </Typography>
                     </div>
@@ -113,7 +116,7 @@ function Demos() {
                         />
                     </div>
                     <div className={classes.videoHeading}>
-                        <Typography variant="caption">
+                        <Typography variant="caption" style={{fontSize:16}}>
                             Filters quickly and thoroughly cleaned by an ultrasonic washer without damage.
                         </Typography>
                     </div>

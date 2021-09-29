@@ -216,8 +216,7 @@ function Science() {
                     <Typography variant="subtitle2" className={classes.topText}>  
                         <div className={classes.scienceText}>    
                         These waves are absorbed by water, heating it up and causing quick 
-                        evaporation. The United States Department of Energy states in this 
-                        paper, that this process is very fast in comparison to traditional 
+                        evaporation. This process is significantly faster than traditional 
                         drying methods. 
                         </div>
                     </Typography>     
