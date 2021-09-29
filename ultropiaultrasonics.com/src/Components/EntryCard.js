@@ -20,12 +20,9 @@ const useStyles = makeStyles((theme) => ({
 
     },
     logostyle:{
-        width:'100%', 
-        padding:'100px',
+        width:'75%', 
         paddingTop:'45px',
-        paddingBottom:'0px',
         [theme.breakpoints.down(750)]: {
-            padding:'100px',
             paddingTop:'45px',
             paddingBottom:'0px',
         },
@@ -46,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
           position: 'absolute', left: '50%', top: '10%',
           transform: 'translate(-50%, -10%)',
         },
-
+        
     },
 
 }));
@@ -55,15 +52,13 @@ function EntryCard() {
     const classes = useStyles();
     const { height, width } = useWindowDimensions();
     const mobilePaperSize = (inwidth) => ({
-        width:inwidth / 5,
-        textAlign:'center',
-        borderRadius:400/2,
+        width:360,
       });
 
     if (width >= 750) {
         return ( 
             <div className={classes.overlay}>
-                <Paper style={{borderRadius:400/2, maxWidth:'1000px', alignSelf:'center'}}>
+                <Paper style={{borderRadius:400/2, maxWidth:'1000px', textAlign:'center', alignSelf:'center'}}>
                     <img src={Logo} className={classes.logostyle} alt="Ultropia"/>
                     <div style={{textAlign:'center', paddingBottom:'10px', paddingTop:'0px'}}>
                         <ButtonGroup    >
@@ -84,12 +79,12 @@ function EntryCard() {
     }
     else {
         return ( 
-            <div className={classes.overlay} style={{textAlign:'center'}}>
-            <Paper className={mobilePaperSize(width)}>
-                <img src={Logo} style={{width:'50%'}} alt="Ultropia"/>
-                <div style={{textAlign:'center', paddingBottom:'10px', paddingTop:'0px'}}>
-                    <ButtonGroup    >
-                        <div style={{textAlign:'left'}}>
+            <div className={classes.overlay} style={{textAlign:'center'}} >
+                <div>
+                <img src={Logo} style={{width:360}} alt="Ultropia"/>
+                </div>
+                    <ButtonGroup   style={{paddingTop:'25px'}} >
+                        <div style={{textAlign:'left', paddingRight:'60px' }}>
                             <GetInTouch />
                         </div>
                         <div style={{textAlign:'right'}}>
@@ -99,9 +94,25 @@ function EntryCard() {
                             </Button>
                         </div>
                     </ButtonGroup>
-                </div>
-            </Paper>    
-        </div>
+            
+            </div>
+        // <Paper className={mobilePaperSize(360)}>
+        //         <img src={Logo} style={{width:'50%'}} alt="Ultropia"/>
+        //         <div style={{textAlign:'center', paddingBottom:'10px', paddingTop:'0px'}}>
+        //             <ButtonGroup    >
+        //                 <div style={{textAlign:'left'}}>
+        //                     <GetInTouch />
+        //                 </div>
+        //                 <div style={{textAlign:'right'}}>
+        //                     <Button disableElevation  variant="contained" color="secondary" orientation="horizontal"  href='https://www.linkedin.com/company/ultropia/' 
+        //                     >
+        //                         About us
+        //                     </Button>
+        //                 </div>
+        //             </ButtonGroup>
+        //         </div>
+        //     </Paper>    
+
             // <div className={classes.overlay}>
             //     <Paper style={{ borderRadius:25,  alignSelf:'center'}}>
             //         <div style={{width:'100%'}}>

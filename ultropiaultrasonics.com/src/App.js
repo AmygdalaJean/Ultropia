@@ -40,9 +40,9 @@ const useStyles = makeStyles((theme) => ({
     maxWidth:'2200px',
     minWidth:'1000px',
     float:'right',  
-
-
   },
+
+
   background:{
     [theme.breakpoints.down(1190)]: {
       width:'1190px', 
