@@ -18,8 +18,6 @@ import useWindowDimensions from './Components/WindowSize';
 import "./static/App.css";
 
 
-
-
 const custTheme = createTheme({
   palette: {
     primary: grey,
@@ -69,23 +67,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
 
-  overlay: {
-    [theme.breakpoints.down(1190)]: {
-      position: 'absolute', left: '50%', top: '15%',
-      transform: 'translate(-50%, -15%)',
-      minWidth:'800px'
-    },
-    [theme.breakpoints.up(1190)]: {
-      position: 'absolute', left: '50%', top: '25%',
-      transform: 'translate(-50%, -25%)'
-    },    
-    [theme.breakpoints.down(750)]: {
-      position: 'absolute', left: '50%', top: '10%',
-      transform: 'translate(-50%, -10%)',
-      minWidth:'200px'
-    },
-
- },
   content: {
     [theme.breakpoints.up(750)]: {
       width: '100%',
@@ -116,15 +97,10 @@ function App() {
             <img src={bgImg} alt="The ultropia prototype" className={classes.backgroundimg}/>
           </Paper>
             <Grid container spacing={3} style={{minWidth:'360px'}}>
-            
+       
+                  
+              <EntryCard/>
 
-            
-            
-              <Container maxWidth="md" className={classes.overlay}>    
-                    
-                <EntryCard/>
-                
-              </Container>   
               
               <Container maxWidth="md" >    
                     
