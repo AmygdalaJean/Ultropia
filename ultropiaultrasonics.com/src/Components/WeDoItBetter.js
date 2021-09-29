@@ -38,6 +38,11 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         margin:'50px',
         borderRadius: 400/ 2,
+        [theme.breakpoints.down(750)]: {
+            borderRadius: 75,
+            margin:25,
+            padding:10
+        },
         
     },
     causeDiv: {        
@@ -45,6 +50,9 @@ const useStyles = makeStyles((theme) => ({
         padding: '75px',
         paddingTop: '12px',
         paddingBottom: '0px',  
+        [theme.breakpoints.down(750)]: {
+            padding:10
+        },
     },
     causeText: {
         fontSize:27,    
@@ -52,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(900)]: {
             fontSize:19,  
         },
+
     },
     causeSubtitle: {
         fontSize:16,    

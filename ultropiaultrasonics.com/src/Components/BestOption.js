@@ -23,7 +23,10 @@ const useStyles = makeStyles((theme) => ({
     callText: {
       padding:'80px',
       paddingTop:'0px',
-      paddingBottom:'20px'
+      paddingBottom:'20px',
+      [theme.breakpoints.down(750)]: {
+        padding:20,
+    },
     }
 }));
 
