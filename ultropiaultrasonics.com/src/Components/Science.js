@@ -32,14 +32,17 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
     },
     subContainer: {
-        paddingTop: '25px',
+        paddingTop: '0px',
         paddingBottom: '25px',
         textAlign:'center',
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        padding: theme.spacing(3, 2),
+        
         height: 250,
+        [theme.breakpoints.down(750)]: {
+            padding:'5px'
+        },
 
     },
     img: {
@@ -65,6 +68,12 @@ const useStyles = makeStyles((theme) => ({
     div: {
         marginTop:'50px',
         marginBottom:'50px'
+    },
+    container:{
+        padding:50,
+        [theme.breakpoints.down(750)]: {
+            padding:0
+        }
     }
 }));
 
@@ -77,7 +86,7 @@ function Science() {
         <Typography variant="h4" className={classes.subheading} >
             <b>How Does it Work?</b>
         </Typography>
-        <Container style={{padding:'50px'}}>
+        <Container className={classes.container}>
 
         <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={8}>   

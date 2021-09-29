@@ -104,7 +104,7 @@ function App() {
               
               <Container maxWidth="md" >    
                     
-              <div >
+              <div>
                 <div id="UltramaticIntro">
                   <Box  className={classes.content}>              
                     <AboutProduct />

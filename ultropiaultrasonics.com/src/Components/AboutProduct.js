@@ -50,7 +50,7 @@ function Content() {
             <ProductValue/>
 
           <Paper className={classes.paper} elevation={5}>
-
+            
             <Science/>    
             
             <VideoDemos/>

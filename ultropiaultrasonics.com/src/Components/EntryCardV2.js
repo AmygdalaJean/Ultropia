@@ -19,9 +19,9 @@ function EntryCard() {
     if (width >= 750) {
         return ( 
            <div>
-<Paper className={classes.background}>
-            <img src={bgImg} alt="The ultropia prototype" className={classes.backgroundimg}/>
-          </Paper>
+                <Paper className={classes.background}>
+                    <img src={bgImg} alt="The ultropia prototype" className={classes.backgroundimg}/>
+                </Paper>
            </div>
         )
     }
