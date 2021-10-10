@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
     logostyle:{
-        width:'75%', 
+        width:'100%', 
         paddingTop:'45px',
         [theme.breakpoints.down(750)]: {
             paddingTop:'45px',
@@ -29,15 +29,15 @@ const useStyles = makeStyles((theme) => ({
 
     }, 
     overlay: {
-        [theme.breakpoints.down(1190)]: {
+        [theme.breakpoints.down(1250)]: {
           position: 'absolute', left: '50%', top: '15%',
           transform: 'translate(-50%, -15%)',
           minWidth:'800px'
         },
-        [theme.breakpoints.up(1190)]: {
+        [theme.breakpoints.up(1250)]: {
           position: 'absolute', left: '50%', top: '25%',
           transform: 'translate(-50%, -25%)',
-          width:'1000px'
+          width:'1200px'
         },    
         [theme.breakpoints.down(750)]: {
           position: 'absolute', left: '50%', top: '10%',
@@ -58,7 +58,7 @@ function EntryCard() {
     if (width >= 750) {
         return ( 
             <div className={classes.overlay}>
-                <Paper style={{borderRadius:400/2, maxWidth:'1000px', textAlign:'center', alignSelf:'center'}}>
+                <div style={{ maxWidth:'100%', textAlign:'center', alignSelf:'center'}}>
                     <img src={Logo} className={classes.logostyle} alt="Ultropia"/>
                     <div style={{textAlign:'center', paddingBottom:'10px', paddingTop:'0px'}}>
                         <ButtonGroup    >
@@ -73,7 +73,7 @@ function EntryCard() {
                             </div>
                         </ButtonGroup>
                     </div>
-                </Paper>    
+                </div>    
             </div>
         )
     }

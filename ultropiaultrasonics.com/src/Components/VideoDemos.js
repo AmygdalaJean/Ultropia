@@ -47,7 +47,10 @@ function Demos() {
   
     return (
         <div style={{padding:'20px'}} id="UltrasonicCleaning" >   
-        <Container maxWidth='xl' style={{width:'90%'}}>  
+        <div  style={{textAlign:'center'}}>  
+        <Typography variant="h3">
+            <b><i>Ultrasonics in Action</i></b>
+        </Typography>
             <Grid container spacing={4} >
                 <Grid item xs={4} > 
                     <div className={classes.videoHeading} >
@@ -92,7 +95,7 @@ function Demos() {
                     </div>
                 </Grid>
             </Grid>
-            </Container>  
+            </div>  
         </div>
 
     );
@@ -100,6 +103,9 @@ function Demos() {
   else{
       return (
           <div style={{padding:'20px'}} id="UltrasonicCleaning">
+                      <Typography variant="h4" style={{textAlign:'center'}}>
+                        <b><i>Ultrasonics in Action</i></b>
+                    </Typography>
               <div className={classes.videoHeading} >
                         <Typography variant="caption" style={{fontSize:16}}>
                             Large ultrasonic washer removes all rust and grease from an old engine.

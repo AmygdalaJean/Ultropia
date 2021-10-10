@@ -40,37 +40,38 @@ function HumanRight() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root} id="WhatWeNeed">
-        <Paper className={classes.paper} elevation={5} style={{borderRadius:20}}>
-            <div className={classes.text}>
-                <Typography variant="h3" style={{paddingBottom:25}}>
-                    <div>Washing Clothes Should Be a <b>Human Right</b> </div>
-                </Typography>
+    <Container maxWidth="lg">
+        <div className={classes.root} id="WhatWeNeed">
+        
+                <div className={classes.text}>
+                    <Typography variant="h1" style={{paddingBottom:25, paddingTop:25}}>
+                        <div>Washing Clothes Should Be a <b>Human Right</b> </div>
+                    </Typography>
 
-                <Container maxWidth='md'>
-                    <ReactPlayer
-                        url="https://www.youtube.com/watch?v=6sqnptxlCcw"
-                        width='100%'
-                        controls='true'
-                    />
-                
-                <div >
-                <Typography variant="h4" className={classes.subHeading} >
-                    <div style={{width:'100%', }}>
-                        <b >
-                            ...but traditional washing machines are not equipped 
-                            for such a challenge.
-                        </b>
-                    </div>
-                </Typography >
+                    <Container maxWidth='md'>
+                        <ReactPlayer
+                            url="https://www.youtube.com/watch?v=6sqnptxlCcw"
+                            width='100%'
+                            controls='true'
+                        />
+                    
+                    {/* <div >
+                    <Typography variant="h4" className={classes.subHeading} >
+                        <div style={{width:'100%', }}>
+                            <b >
+                                ...but traditional washing machines are not equipped 
+                                for such a challenge.
+                            </b>
+                        </div>
+                    </Typography >
+                    </div> */}
+                    </Container>
                 </div>
-                </Container>
-            </div>
-
-        </Paper>
 
 
-    </div>
+
+        </div>
+    </Container>
   );
 }
 

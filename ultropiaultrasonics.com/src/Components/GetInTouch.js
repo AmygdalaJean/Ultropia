@@ -24,8 +24,7 @@ function Alert(props) {
   
   const useStyles = makeStyles((theme) => ({
     root: {
-      maxWidth: 600,
-      width: '100%',
+      maxWidth: '100%',
       '& > * + *': {
         marginTop: theme.spacing(2),
       },

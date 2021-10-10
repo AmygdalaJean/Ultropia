@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     text:{
-        fontSize:28,
+        fontSize:32,
         [theme.breakpoints.down(600)]: {
             fontSize:20
     },
@@ -93,12 +93,14 @@ function Content() {
                     <div className={classes.largeText} >
                         <Typography variant="h5" className={classes.text}>
                             <div style={{paddingBottom: '5px'}}>
-                                <strong><i>Say goodbye to your washer and dryer!</i></strong>
+                                <strong ><i>Say goodbye to your washer and dryer!</i></strong> 
                             </div>
-
-                            The <i>Ultramatic</i> is a two-in-one washing and drying machine that uses
+                            
+                            The <i>Ultramatic</i> is 
+                            a two-in-one washing and drying machine that uses
                             a high frequency ultrasonic emitter to clean, sanitize, and dry clothing
                             faster and more efficient than ever possible before.
+                            
                         </Typography>
                         
                     </div>                    

@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
+import { Container } from "@material-ui/core";
 
 import "./../static/App.css";
 
@@ -9,6 +10,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        marginTop:25
       },
     paper: {
       padding: theme.spacing(2),
@@ -35,10 +37,10 @@ function Content() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root} id="WeDoItBetter">
-        <Paper className={classes.paper} elevation={5}>
+    <Container maxWidth="md" className={classes.root} id="WeDoItBetter">
+
             <Typography variant='h4' style={{textAlign:'center'}}>
-                <div style={{padding:'40px'}}>
+                <div style={{padding:'0px'}}>
                   <Typography variant='h3'>
                     <i><b>The Ultramatic is the Answer.</b></i>
                   </Typography>
@@ -49,18 +51,13 @@ function Content() {
                   of today, or tomorrow. 
                 </div>
                 <div className={classes.callText}>
-                  <b>Ultropia is the answer, and the Ultramatic is its 
-                  vehicle</b>. Using less water, less energy, less space. Easier to 
-                  travel with, to use, to rely on, the Ultramatic is the solution that 
-                  we need. 
-              </div>
-              <div className={classes.callText}>
-                Stay up to date with us! Follow us on <a href="" target="_blank">LinkedIn</a>,
-                sign up for our newsletter! 
+                  Using less water, less energy, less space, being easier to use, transport, 
+                  and to trust, <b>the Ultramatic is the solution that 
+                  we need. </b>
               </div>
             </Typography>
-        </Paper>
-    </div>
+
+    </Container>
   );
 }
 

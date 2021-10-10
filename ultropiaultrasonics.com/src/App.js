@@ -10,10 +10,13 @@ import grey from '@material-ui/core/colors/grey';
 import Introsection from './Components/Introsection';
 import ProductValue from './Components/ProductValue';
 import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import HumanRight from "./Components/HumanRight";
 
 import bgImg from './Components/Images/bgImg1.png'
 
-import EnviroEffects from './Components/EnviroEffects'
+import WeDoItBetter from "./Components/WeDoItBetter";
+
+import BestOption from "./Components/BestOption";
 import FooterBar from './Components/FooterBar'
 
 import useWindowDimensions from './Components/WindowSize';
@@ -112,7 +115,7 @@ function App() {
   const { height, width } = useWindowDimensions();
 
   return (
-      <div  >
+      <div  id="Top">
       <ThemeProvider theme={custTheme} >
         <VertBar/>         
         
@@ -146,36 +149,35 @@ function App() {
 
               <Science/>    
               
-              <VideoDemos/>
-                
+              <div className={classes.backgroundGoldFill} style={{padding:25, marginTop:25}}>                  
+              
+                <Container maxWidth="lg" style={{width:'90%'}} >
+                  <VideoDemos/>
+                </Container> 
+              </div>
+              
+              <HumanRight />
                
-               <div className={classes.backgroundGoldFill} style={{padding:25, marginTop:100}}>
-              <Container maxWidth="lg" style={{float:'center',}} >  
-
-             
-                <Box  className={classes.content}>              
-                  <EnviroEffects/>
-                </Box>
+              <div  style={{padding:5, marginTop:0}}>
+                <Container maxWidth="lg" style={{width:'90%'}} >  
+                               
+                    <WeDoItBetter />             
+                
                
                 </Container>
               
                 </div>
+
+                <BestOption/>
               
 
-              <Container maxWidth='md'>
-              <div style={{paddingTop: '0px', marginTop:50, marginBottom:'50px'}}>
-                               
-                    <FooterBar/>
-                  
-              </div>   
+              <div className={classes.backgroundGoldFill} style={{padding:25, marginTop:25}}>                  
               
-
-              
-              
-
-              
-                    
-              </Container>      
+              <Container maxWidth="md" style={{width:'90%'}} >
+              <FooterBar/>
+              </Container> 
+            </div>
+   
                   
           
           

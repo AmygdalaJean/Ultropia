@@ -51,10 +51,16 @@ function FooterBar() {
             
             
                 <div className={classes.boxSpacing}>
-                    <Typography variant='h2' style={{textAlign:'center'}}>
-                        <div>Questions? Comments?</div>
-                        <div>Want to get in touch?</div>
-                    </Typography>
+                    <div style={{padding:'40px'}}>  
+                        <Typography variant='h3' style={{textAlign:'center'}}>                 
+                            <b><i>
+                                <div>Questions? Comments?</div>
+                                <div>Want to get in touch?</div>
+                            </i></b>
+                        </Typography>
+                    </div>
+
+                    
                     <Grid container spacing={4} style={{paddingTop:'25px'}}>
                         <Grid item xs={6} style={{textAlign:'left'}}>
                             <Paper elevation={5} className={classes.paper}>

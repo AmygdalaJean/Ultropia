@@ -84,7 +84,7 @@ function Science() {
     <div id="UltramaticScience">       
 
         
-        <Typography variant="h2" className={classes.subheading} >
+        <Typography variant="h1" className={classes.subheading} >
             <b>How Does it Work?</b>
         </Typography>
         <Container className={classes.container} maxWidth="md">
