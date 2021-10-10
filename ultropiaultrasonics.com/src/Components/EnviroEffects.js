@@ -2,7 +2,7 @@ import React from "react";
 import HumanRight from './HumanRight'
 import WeDoItBetter from './WeDoItBetter'
 import BestOption from './BestOption'
-
+import { Container } from "@material-ui/core";
 
 import "./../static/App.css";
 
@@ -31,8 +31,13 @@ function Content() {
   return (
     <div className={classes.root}>
       <HumanRight />
-      <WeDoItBetter />
+      <Container maxWidth='md'>
+        <WeDoItBetter />
+      </Container>
       <BestOption/>
+      
+     
+      
       
     </div>
   );

@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     },
     scienceText: {
         [theme.breakpoints.up(915)]:{
-            fontSize: 24,
+            fontSize: 32,
         },
         [theme.breakpoints.down(915)]: {
             fontSize: 20,
@@ -83,10 +83,11 @@ function Science() {
   return (
     <div id="UltramaticScience">       
 
-        <Typography variant="h4" className={classes.subheading} >
+        
+        <Typography variant="h2" className={classes.subheading} >
             <b>How Does it Work?</b>
         </Typography>
-        <Container className={classes.container}>
+        <Container className={classes.container} maxWidth="md">
 
         <Grid container spacing={2} className={classes.subContainer}>
                 <Grid item xs={8}>   

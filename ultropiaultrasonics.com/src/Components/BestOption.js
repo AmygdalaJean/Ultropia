@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(2),
       textAlign: 'left',
       marginBottom: '0px',
-      borderRadius: 40/ 2
+      borderRadius: 40/ 2,
+      marginBottom:25
     },
     superheading: {
         textAlign: 'center',
@@ -36,9 +37,9 @@ function Content() {
   return (
     <div className={classes.root} id="WeDoItBetter">
         <Paper className={classes.paper} elevation={5}>
-            <Typography variant='h5' style={{textAlign:'center'}}>
+            <Typography variant='h4' style={{textAlign:'center'}}>
                 <div style={{padding:'40px'}}>
-                  <Typography variant='h4'>
+                  <Typography variant='h3'>
                     <i><b>The Ultramatic is the Answer.</b></i>
                   </Typography>
                 </div>

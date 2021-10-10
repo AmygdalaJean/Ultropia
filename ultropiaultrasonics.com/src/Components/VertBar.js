@@ -25,6 +25,7 @@ const drawerWidth = 65;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    
 
   },
   appBar: {
@@ -72,7 +73,9 @@ const useStyles = makeStyles((theme) => ({
     height:'100%',
     flexGrow: 1, 
     justifyContent:'center', 
-    alignItems: 'center'
+    alignItems: 'center',
+    
+    
   },
 }));
 
@@ -273,10 +276,11 @@ export default function PermanentDrawerLeft() {
   
   if (width > 1190) {
     return (
-      <div className={classes.root}>
+      <div className={classes.root} >
         <CssBaseline />
+        <div >
 
-          <div className={classes.clickableContainer}>
+          <div className={classes.clickableContainer} >
             <Drawer
               className={classes.drawer}
               variant="permanent"
@@ -317,6 +321,7 @@ export default function PermanentDrawerLeft() {
 
             
           </Drawer>
+        </div>
         </div>
       </div>
     );

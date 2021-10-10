@@ -58,15 +58,22 @@ const useStyles = makeStyles((theme) => ({
         alignSelf: 'center',
     },
     largeText: {
-
+        fontSize:30,
         padding: '50px',
         paddingTop: '20px',
         paddingBottom: '20px',
         textAlign: 'center',
         [theme.breakpoints.down(600)]: {
             padding:'10px',
+            fontSize:20
         },
     },
+    text:{
+        fontSize:28,
+        [theme.breakpoints.down(600)]: {
+            fontSize:20
+    },
+},
 
 }));
 
@@ -84,7 +91,7 @@ function Content() {
             <Container>
                 <Paper className={classes.paper} style={{borderRadius:20}} elevation={5}>
                     <div className={classes.largeText} >
-                        <Typography variant="h5">
+                        <Typography variant="h5" className={classes.text}>
                             <div style={{paddingBottom: '5px'}}>
                                 <strong><i>Say goodbye to your washer and dryer!</i></strong>
                             </div>

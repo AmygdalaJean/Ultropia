@@ -2,6 +2,7 @@ import React from "react";
 import Grid from '@material-ui/core/Grid';
 import ReactPlayer from "react-player"
 import Typography from "@material-ui/core/Typography";
+import { Container } from "@material-ui/core";
 
 import "./../static/App.css";
 
@@ -28,6 +29,13 @@ const useStyles = makeStyles((theme) => ({
         alignSelf: 'center',
     },
 
+    videoHeader:{
+        fontSize:15,
+        [theme.breakpoints.down(750)]: {
+            fontSize:12,
+        },
+    }
+
 }));
 
 function Demos() {
@@ -38,11 +46,12 @@ function Demos() {
 
   
     return (
-        <div style={{padding:'20px'}} id="UltrasonicCleaning" >       
+        <div style={{padding:'20px'}} id="UltrasonicCleaning" >   
+        <Container maxWidth='xl' style={{width:'90%'}}>  
             <Grid container spacing={4} >
                 <Grid item xs={4} > 
                     <div className={classes.videoHeading} >
-                        <Typography variant="caption" >
+                        <Typography variant="caption" className={classes.videoHeader}>
                             Large ultrasonic washer removes all rust and grease from an old engine.
                         </Typography>
                     </div>
@@ -56,7 +65,7 @@ function Demos() {
                 </Grid>
                 <Grid item xs={4}>
                     <div className={classes.videoHeading}>
-                        <Typography variant="caption">
+                        <Typography variant="caption" className={classes.videoHeader}>
                             Demonstration of both the speed and precision of an ultrasonic washer. 
                         </Typography>
                     </div>
@@ -70,7 +79,7 @@ function Demos() {
                 </Grid>
                 <Grid item xs={4}>
                     <div className={classes.videoHeading}>
-                        <Typography variant="caption">
+                        <Typography variant="caption" className={classes.videoHeader}>
                             Filters quickly and thoroughly cleaned by an ultrasonic washer without damage.
                         </Typography>
                     </div>
@@ -83,7 +92,7 @@ function Demos() {
                     </div>
                 </Grid>
             </Grid>
-
+            </Container>  
         </div>
 
     );

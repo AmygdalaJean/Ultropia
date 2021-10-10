@@ -49,9 +49,9 @@ function FooterBar() {
     return (
         <div className={classes.root} style={{}}>
             
-            <Paper className={classes.paper} elevation={5} style={{paddingTop:65, paddingBottom:65}}>
+            
                 <div className={classes.boxSpacing}>
-                    <Typography variant='h4' style={{textAlign:'center'}}>
+                    <Typography variant='h2' style={{textAlign:'center'}}>
                         <div>Questions? Comments?</div>
                         <div>Want to get in touch?</div>
                     </Typography>
@@ -59,7 +59,7 @@ function FooterBar() {
                         <Grid item xs={6} style={{textAlign:'left'}}>
                             <Paper elevation={5} className={classes.paper}>
                                 <Typography variant='h6' style={{textAlign:'center', paddingBottom:'25px'}}>
-                                    Find more information about us here!
+                                    Learn more about us and what we do here!
                                 </Typography>
                                 <Button  disableElevation fullWidth color='secondary' variant='contained' href='https://www.linkedin.com/company/ultropia/' 
                                 >
@@ -77,7 +77,7 @@ function FooterBar() {
                         </Grid>
                     </Grid>
                 </div>
-            </Paper>
+           
     
             
         </div>
@@ -86,14 +86,14 @@ function FooterBar() {
   else {
       return (
         <div>
-            <Paper className={classes.paper} elevation={5} style={{paddingTop:65, paddingBottom:65}}>
+            
                 <div className={classes.boxSpacing}>
-                    <Typography variant='h4' style={{textAlign:'center'}}>
+                    <Typography variant='h5' style={{textAlign:'center'}}>
                         <div>Questions? Comments?</div>
                         <div>Want to get in touch?</div>
                     </Typography>
                     
-                            <Paper elevation={5} className={classes.paper} style={{marginTop:65}}>
+                            <Paper elevation={5} className={classes.paper} style={{marginTop:25}}>
                                 <Typography variant='h6' style={{textAlign:'center', paddingBottom:'25px'}}>
                                     Find more information about us here!
                                 </Typography>
@@ -103,7 +103,7 @@ function FooterBar() {
                                 </Button>
                             </Paper>
                         
-                            <Paper elevation={5} className={classes.paper} style={{marginTop:65}}>
+                            <Paper elevation={5} className={classes.paper} style={{marginTop:25}}>
                                 <Typography variant='h6' style={{textAlign:'center', paddingBottom:'25px'}}>
                                     Leave us a message and your email here!
                                 </Typography>
@@ -111,7 +111,7 @@ function FooterBar() {
                             </Paper>
   
                 </div>
-            </Paper>
+          
         </div>
       )
   }

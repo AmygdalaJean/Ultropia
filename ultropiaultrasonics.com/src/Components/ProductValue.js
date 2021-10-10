@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
             fontSize:20
         },
         [theme.breakpoints.up(800)]: {
-            fontSize:23
+            fontSize:28
         },
         [theme.breakpoints.down(600)]: {
             fontSize:18,
@@ -48,19 +48,31 @@ const useStyles = makeStyles((theme) => ({
 
  
     },
+    emphasis:{
+        [theme.breakpoints.down(800)]: {
+            fontSize:23
+        },
+        [theme.breakpoints.up(800)]: {
+            fontSize:35
+        },
+        [theme.breakpoints.down(600)]: {
+            fontSize:20,
+
+        },
+    },
     subheading: {
         paddingTop: '50px',
         textAlign:'center'
     },
     paper: {
+        borderRadius:1000,
         [theme.breakpoints.up(750)]: {
-            margin:'30px',
-            height:'300px',
+            margin:'50px',
+            height:'500px',
             textAlign:'center',
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            padding: theme.spacing(3, 2),
             marginTop:'0px'
         },
         [theme.breakpoints.down(750)]: {
@@ -75,6 +87,7 @@ const useStyles = makeStyles((theme) => ({
         },
         
 
+
     }
 }));
 
@@ -82,25 +95,26 @@ function Content() {
   const classes = useStyles();
 
   return (
-    <div id="UltramaticValue">
+    <div id="UltramaticValue" >
 
         <Typography variant="h4" className={classes.subheading} >       
             {/* <b>What Does it Do?</b> */}
         </Typography>
            
-          <Grid container spacing={2}  >
+          <Grid container spacing={2} style={{textAlign:'center'}} >
             <Grid item xs={6} >  
-                <Paper className={classes.paper} elevation={5} style={{borderRadius:20}}> 
+                <Paper className={classes.paper} elevation={5}> 
                     <Typography variant="h5" className={classes.tableItem} >      
-                        <i><b>Two machines in one</b>, replace both your washer and dryer with the Ultramatic, 
+                    <i><u><b className={classes.emphasis}>Two machines in one,</b></u> replace both your washer and dryer with the Ultramatic, 
                         saving you time, money, and space.</i>
                     </Typography>      
                 </Paper>
             </Grid>
             <Grid item xs={6}>   
-                <Paper className={classes.paper} elevation={5} style={{borderRadius:20}}> 
+                <Paper className={classes.paper} elevation={5} > 
                     <Typography variant="h5" className={classes.tableItem}>      
-                        <i>Washes and dries your clothes <b>in just 20 minutes</b>.</i>
+                        <i>Washes and dries your  
+                            clothes in just <u><b className={classes.emphasis}> 20 minutes.</b></u></i>
                     </Typography>      
                 </Paper>
             </Grid>
@@ -108,18 +122,17 @@ function Content() {
 
         <Grid container spacing={2}>
             <Grid item xs={6}>   
-                <Paper className={classes.paper} elevation={5} style={{borderRadius:20}}> 
+                <Paper className={classes.paper} elevation={5} > 
                     <Typography variant="h5" className={classes.tableItem}>      
-                        <i>Uses less water and electricity to operate than a washing and drying machine, 
-                        <b> making it cheaper to clean your clothes!</b></i>
+                        <i>Uses less water and electricity to operate than a washing and drying machine, making it  <u><b className={classes.emphasis}>cheaper to clean your clothes!</b></u></i>
                     </Typography>      
                 </Paper>
             </Grid>
             
             <Grid item xs={6}>   
-                <Paper className={classes.paper} elevation={5} style={{borderRadius:20}}> 
+                <Paper className={classes.paper} elevation={5} > 
                     <Typography variant="h5" className={classes.tableItem}>      
-                        <i><b>Extends the life of your clothing</b>, but avoiding the wear and tear caused by
+                        <i><u><b className={classes.emphasis}>Extends the life of your clothing</b></u> by avoiding the wear and tear caused by
                         needless friction in a traditional washing machine.</i>
                     </Typography>      
                 </Paper>
@@ -128,19 +141,18 @@ function Content() {
 
         <Grid container spacing={2} style={{marginBottom:'50px'}}>
             <Grid item xs={6}>   
-                <Paper className={classes.paper} elevation={5} style={{borderRadius:20}}> 
+                <Paper className={classes.paper} elevation={5} > 
                     <Typography variant="h5" className={classes.tableItem}>      
-                        <i><b>Does not require water hooks</b> and works at any standard electrical outlet, 
-                        making the <i>Ultramatic</i> <b>highly portable</b>.</i>
+                        <i>Does not require water hooks and works at any standard electrical outlet, 
+                        making the <i>Ultramatic</i> <u><b className={classes.emphasis}>highly portable</b ></u>.</i>
                     </Typography>     
                 </Paper>
             </Grid>
             
             <Grid item xs={6}>   
-                <Paper className={classes.paper} elevation={5} style={{borderRadius:20}}> 
+                <Paper className={classes.paper} elevation={5} > 
                     <Typography variant="h5" className={classes.tableItem}>      
-                        <i>Never before has cleaning clothes been so <b>accessible, cheap, and easy</b>.
-                        The Ultramatic will revolutionize how you clean your clothes.</i>
+                        <i>Never before has cleaning clothes been so <u><b className={classes.emphasis}>accessible, cheap, and easy</b></u>. The Ultramatic will revolutionize how you clean your clothes.</i>
                     </Typography>      
                 </Paper>
             </Grid>

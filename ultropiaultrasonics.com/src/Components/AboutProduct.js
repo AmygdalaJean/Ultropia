@@ -1,10 +1,11 @@
 import React from "react";
-import Typography from '@material-ui/core/Typography';
+
 import Paper from '@material-ui/core/Paper';
 
 import Science from './Science'
 import ProductValue from './ProductValue'
 import ProductIntroduction from './ProductIntroduction'
+import Typography from '@material-ui/core/Typography';
 import VideoDemos from './VideoDemos'
 
 import "./../static/App.css";
@@ -32,7 +33,7 @@ function Content() {
 
   return (
     <div className={classes.root}>
-        <Paper className={classes.paper} elevation={5}>
+        
 
             <Typography variant="h3" className={classes.superheading}>
                 <div>The <b>Ultramatic</b>;</div>
@@ -43,7 +44,7 @@ function Content() {
 
             <ProductIntroduction/>
 
-        </Paper>
+        
       
         
 
@@ -58,6 +59,37 @@ function Content() {
         </Paper>
     </div>
   );
+
+
+  // old layout
+  // return (
+  //   <div className={classes.root}>
+  //       <Paper className={classes.paper} elevation={5}>
+
+  //           <Typography variant="h3" className={classes.superheading}>
+  //               <div>The <b>Ultramatic</b>;</div>
+  //               <Typography variant="h4">
+  //                   <i>Democratizing Laundry</i>
+  //               </Typography>
+  //           </Typography >
+
+  //           <ProductIntroduction/>
+
+  //       </Paper>
+      
+        
+
+  //           <ProductValue/>
+
+  //         <Paper className={classes.paper} elevation={5}>
+            
+  //           <Science/>    
+            
+  //           <VideoDemos/>
+
+  //       </Paper>
+  //   </div>
+  // );
 }
 
 export default Content;

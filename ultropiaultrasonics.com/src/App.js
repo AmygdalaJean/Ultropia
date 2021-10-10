@@ -4,9 +4,11 @@ import Box from '@material-ui/core/Box'
 import EntryCard from "./Components/EntryCard"
 import VertBar from "./Components/VertBar"
 import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
+import Science from './Components/Science';
+import VideoDemos from './Components/VideoDemos';
 import grey from '@material-ui/core/colors/grey';
-import AboutProduct from './Components/AboutProduct';
+import Introsection from './Components/Introsection';
+import ProductValue from './Components/ProductValue';
 import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
 import bgImg from './Components/Images/bgImg1.png'
@@ -54,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
       width:'100%', 
       height:'auto', 
       backgroundColor:'black', 
-      float:'left'
+      float:'left',
     },
     [theme.breakpoints.up(1190)]: {
       width:'3840px', 
@@ -68,6 +70,7 @@ const useStyles = makeStyles((theme) => ({
 
 
   content: {
+    
     [theme.breakpoints.up(750)]: {
       width: '100%',
       marginTop: '100px',
@@ -82,6 +85,26 @@ const useStyles = makeStyles((theme) => ({
     },
 
   },
+  backgroundGoldFill: {
+    backgroundColor: [custTheme.palette.secondary.main],
+
+    // [theme.breakpoints.up(750)]: {
+      
+    //   width: '100%',
+    //   marginTop: '100px',
+    //   padding: '25px',
+    //   borderRadius: 80/ 2
+    // },
+    // [theme.breakpoints.down(750)]: {
+      
+    //   width: '100%',
+    //   marginTop: '25px',
+    //   padding: '0px',
+    //   borderRadius: 80/ 2
+    // },
+
+  },
+
 }));
 
 function App() { 
@@ -89,48 +112,73 @@ function App() {
   const { height, width } = useWindowDimensions();
 
   return (
-      <div style={{height: '100%', backgroundColor: [custTheme.palette.secondary.main]}}>
+      <div  >
       <ThemeProvider theme={custTheme} >
         <VertBar/>         
-        <div className={classes.root} id="Top">
+        
           <Paper className={classes.background}>
             <img src={bgImg} alt="The ultropia prototype" className={classes.backgroundimg}/>
           </Paper>
-            <Grid container spacing={3} style={{minWidth:'360px'}}>
+            
        
                   
               <EntryCard/>
 
-              
-              <Container maxWidth="md" >    
+              <div style={{textAlign:'left'}}>
+                -
+              </div>
+              <Container   maxWidth="md" >    
                     
-              <div>
-                <div id="UltramaticIntro">
-                  <Box  className={classes.content}>              
-                    <AboutProduct />
-                  </Box>
+                <div>
+                  <Introsection/>
                 </div>
+
+              </Container> 
+            
                 
-                <div style={{paddingTop: '0px'}}>
-                  <Box  className={classes.content}>              
-                    <EnviroEffects/>
-                  </Box> 
-                </div>   
-              
-
-
-              <div style={{paddingTop: '0px', marginBottom:'100px'}}>
-                  <Box  className={classes.content}>              
-                  <FooterBar/>
-                  </Box> 
-                </div>   
+              <div className={classes.backgroundGoldFill} style={{padding:25, marginTop:25}}>                  
+            
+                <Container maxWidth="lg" >
+                  <ProductValue/>
+                </Container> 
               </div>
 
+
+              <Science/>    
+              
+              <VideoDemos/>
+                
+               
+               <div className={classes.backgroundGoldFill} style={{padding:25, marginTop:100}}>
+              <Container maxWidth="lg" style={{float:'center',}} >  
+
+             
+                <Box  className={classes.content}>              
+                  <EnviroEffects/>
+                </Box>
+               
+                </Container>
+              
+                </div>
+              
+
+              <Container maxWidth='md'>
+              <div style={{paddingTop: '0px', marginTop:50, marginBottom:'50px'}}>
+                               
+                    <FooterBar/>
+                  
+              </div>   
+              
+
+              
+              
+
               
                     
-              </Container>       
-          </Grid>
-        </div>      
+              </Container>      
+                  
+          
+          
       </ThemeProvider>
     </div>
         
