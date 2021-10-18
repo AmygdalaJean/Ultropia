@@ -1,18 +1,17 @@
 import React from "react";
 import Paper from '@material-ui/core/Paper'
+import Instructors from './Instructors'
+import { Container } from "@material-ui/core";
 
 import "./../static/App.css";
-import { Typography } from "@material-ui/core";
-import Grid from '@material-ui/core/Grid'
 
-import Logo from './Images/tinkerLogoEdit2.png'
 
 function Header() {
     return (
-        <div>
-            <Paper style={{backgroundColor: 'white'}}>
-
-            </Paper>    
+        <div>          
+            <Container maxWidth="md" maxWidth='lg' style={{paddingTop:50, paddingBottom:25}}>            
+                <Instructors/>
+            </Container>         
         </div>
 
     );

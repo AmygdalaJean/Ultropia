@@ -1,68 +1,85 @@
 import React from "react";
 
-import grey from '@material-ui/core/colors/grey';
-import amber from '@material-ui/core/colors/amber';
-import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container'
 
-import {Helmet} from 'react-helmet';
+import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import About from './Components/About'
 
 import Header from './Components/Header';
-import Info from './Components/Info'
-import Form from './Components/Form'
+import Home from './Components/Home'
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 import "./static/App.css";
 
+
+
+
 const custTheme = createTheme({
   palette: {
-    primary: grey,
-    secondary: amber
-  }
+    primary: {
+      light: '#757575',
+      main: '#3f3f40',
+      dark: '#dead4e',
+      contrastText: '#000',
+    },
+    secondary: {
+      light: '#ffeb3b',
+      main: '#ff7300',
+      dark: '#dead4e',
+      contrastText: '#000',
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
 })
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-  overlay: {
-    position: 'absolute', left: '50%', top: '25%',
-    transform: 'translate(-60%, -25%)'
- },
-  content: {
-    width: '100%',
-    marginTop: '100px',
-    padding: '25px',
-    borderRadius: 80/ 2
-  },
+
 }));
 
 function App() { 
   const classes = useStyles();
-
+  const [route, setRoute] = React.useState([]);
+  const changeRoute = (event) => {
+      setRoute(window.location.pathname);
+      console.log(route)
+  };
+  
   return (
-    <ThemeProvider theme={custTheme}>
-      <Helmet>
-        <style>{'body { background-color: lightblue; }'}</style>
-      </Helmet>
+    <Router>
+      <ThemeProvider theme={custTheme} >
+        <div style={{backgroundColor: [custTheme.palette.primary.light]}}>
 
-      <Header/>
+          <Header theme={custTheme} route_function={changeRoute} current_route={route}/>
 
-      <Container maxWidth='md' style={{paddingTop:'100px'}}>
-        <Info/>
-      </Container>
+          <Route path="/" exact component={Home}/>
 
-      <Container maxWidth='md' style={{paddingTop:'100px'}}>
-        <Form/>
-      </Container>
-      
-    </ThemeProvider>
+          <Route path="/about" exact component={About}/>
+
+          {/* <Route path="*">
+            404
+          </Route> */}
+
+        </div>
+      </ThemeProvider>
+    </Router>
       
   );
 }
+
+
 
 export default App;

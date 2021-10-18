@@ -49,8 +49,7 @@ const useStyles = makeStyles({
     createData('Afternoon'),
   ];
 
-
-function TimeTable(props) {
+function TimeTable({handleChange, checkedarr}) {
     const classes = useStyles();
 
     return (
@@ -76,6 +75,7 @@ function TimeTable(props) {
                                     <Checkbox 
                                         id={time + day}
                                         size='small'
+                                        onChange={handleChange}
                                     />
                                 </TableCell>
                             ))}                           

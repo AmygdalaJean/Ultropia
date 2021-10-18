@@ -51,7 +51,6 @@ const cats = [
     'Building your first circuit',
 
     'Other...'
-
 ];
 
 function getStyles(name, catagory, theme) {
@@ -115,9 +114,8 @@ export default function Catagories(props) {
             label="Tell us what you want!"
             type=""
             fullWidth
-            disabled
             multiline
-            onChange={console.log('changed')}
+            onChange={props.optional_f}
         />
       
     </div>
