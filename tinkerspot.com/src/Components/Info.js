@@ -18,7 +18,7 @@ function Header() {
     const classes = useStyles();
     return (   
         
-        <Paper style={{paddingTop:'50px', paddingBottom:50}} variant='outlined' >
+        <Paper style={{paddingTop:'50px', paddingBottom:50, borderRadius:25}} variant='outlined' >
             <Container maxWidth="md">
                 <div >
                     <div>

@@ -41,6 +41,18 @@ function Header({theme}) {
                 header= {"By 2025 half the world’s population will be living in a water stressed area"}
                 description = {"But the average household washing machine uses 5,605 gallons of water each year."}
             />
+
+            <Human
+                image = {codyimg}
+                header= {"By 2025 half the world’s population will be living in a water stressed area"}
+                description = {"But the average household washing machine uses 5,605 gallons of water each year."}
+            />
+
+            <Human
+                image = {codyimg}
+                header= {"By 2025 half the world’s population will be living in a water stressed area"}
+                description = {"But the average household washing machine uses 5,605 gallons of water each year."}
+            />
             
         </div>
     );

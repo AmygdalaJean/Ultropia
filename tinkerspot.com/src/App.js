@@ -1,5 +1,5 @@
 import React from "react";
-
+import Helmet from "react-helmet"
 
 import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import About from './Components/About'
@@ -11,7 +11,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from "react-router-dom";
 
 
@@ -57,27 +58,46 @@ function App() {
       setRoute(window.location.pathname);
       console.log(route)
   };
+
+
+  if (String(window.location.pathname) === "/" || String(window.location.pathname) === "/about")
+  {
+    console.log(window.location.pathname)
+    return (
+      <Router>
+        <Helmet>
+          <title>TinkerSpot</title>
+          <meta
+          name="TinkerSpot Landing Page"
+          content="Get involved with TinkerSpot! Sign up for our newsletter and vote on where we should open our first workshop!"
+          />
+        </Helmet>
+        <ThemeProvider theme={custTheme} >
+          <div style={{backgroundColor: [custTheme.palette.primary.light]}}>
   
-  return (
-    <Router>
-      <ThemeProvider theme={custTheme} >
-        <div style={{backgroundColor: [custTheme.palette.primary.light]}}>
-
-          <Header theme={custTheme} route_function={changeRoute} current_route={route}/>
-
-          <Route path="/" exact component={Home}/>
-
-          <Route path="/about" exact component={About}/>
-
-          {/* <Route path="*">
-            404
-          </Route> */}
-
-        </div>
-      </ThemeProvider>
-    </Router>
-      
-  );
+            <Header theme={custTheme} route_function={changeRoute} current_route={route}/>
+  
+            <Route path="/" exact component={Home}/>
+  
+            <Route path="/about" exact component={About}/>
+  
+          </div>
+        </ThemeProvider>
+      </Router>
+        
+    );
+  }
+  else
+  {
+    return (
+      <Router>
+        <Redirect from='*' to='/' />
+        {window.location.reload(false)}
+      </Router>
+    )
+  }
+  
+  
 }
 
 

@@ -64,10 +64,6 @@ const useStyles = makeStyles((theme) => ({
     },
   };
 
-let inMail = ""
-let inLocation = ""
-let inOptional = ""
-let inSubjects = []
 
 const cats = [
     'HardWare Hacking',
@@ -105,17 +101,14 @@ function Form() {
         {
           handleResp()
         //   axios.post('http://localhost:3001/ultropia', {email: inMail, location: inLocation, optional: inOptional})
-          console.log(inMail)
-          console.log(inLocation)
-          console.log(inOptional)
+          console.log(email)
+          console.log(location)
+          console.log(optional)
           console.log(catagory)
           console.log(calender)
-          clear_form()
-        }
-        else
-        {
           
         }
+
 
     };
 
@@ -145,7 +138,8 @@ function Form() {
 
     const [catagory, setcatagory] = React.useState([]);
     const handleChangeCatagories = (event) => {
-        setcatagory(event.target.value);
+        setcatagory(event.target.value)
+        console.log(catagory)
     };
 
     const handleChangeMultiple = (event) => {
@@ -179,7 +173,7 @@ function Form() {
 
     return (
             
-        <Paper style={{backgroundColor: 'white', padding:50}}>
+        <Paper style={{backgroundColor: 'white', padding:50, borderRadius:25}}>
             <Container maxWidth='md'>
                 <Typography variant='h3' align='center'>
                     What do you want from TinkerSpot?
@@ -262,7 +256,7 @@ function Form() {
                                 label="Tell us what you want!"
                                 type=""
                                 fullWidth
-                                disabled
+                                disabled={!catagory.includes("Other...")}
                                 value={optional}
                                 multiline
                                 onChange={handleChangeOptional}
