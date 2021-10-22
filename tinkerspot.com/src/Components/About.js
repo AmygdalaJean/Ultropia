@@ -9,7 +9,7 @@ import "./../static/App.css";
 function Header() {
     return (
         <div>          
-            <Container maxWidth="md" maxWidth='lg' style={{paddingTop:50, paddingBottom:25}}>            
+            <Container maxWidth="lg"  style={{paddingTop:50, paddingBottom:25}}>            
                 <Instructors/>
             </Container>         
         </div>

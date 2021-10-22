@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
     subheader:{
         color:[theme.palette.secondary.main],
-        fontSize:50
+        fontSize:100
     },
     vert_center:{
         display: "flex",
@@ -42,17 +42,14 @@ function Header({theme, route_function, current_route}) {
             <Grid container spacing={0}>
                 <Grid item xs={5} className={classes.vert_center} >
                     <div style={{textAlign:'left',}}>
-                        <img src={CornerLogo} style={{maxWidth:800, width:'100%', margin:0}}/> 
+                        <img src={CornerLogo} style={{maxWidth:400, width:'100%', margin:0}}/> 
                     </div>
                 </Grid>
                 <Grid item xs={7}  className={classes.vert_center}>
                     <div style={{textAlign: 'left', padding:'2.5%', paddingBottom:10}}> 
-                        <Typography variant="h1" className={classes.introduction} >
-                            Welcome to
-                        </Typography>  
-                        <img src={Logo} style={{maxWidth:'800px', width:'80%', marginBottom:35}}/>
-                        <Typography variant="h4" className={classes.subheader} >
-                            Community focused Education
+                        
+                        <Typography variant="h1" className={classes.subheader} >
+                            <i>Who We Are?</i>
                         </Typography>   
                     </div>
                 </Grid>

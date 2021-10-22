@@ -5,6 +5,10 @@ import Container from '@material-ui/core/Container'
 
 import Info from './Info'
 import Form from './Form'
+import KnowMore from './KnowMore'
+
+import Paper from '@material-ui/core/Paper'
+import Divider from '@material-ui/core/Divider'
 
 
 
@@ -45,17 +49,15 @@ function Home() {
   
   return (
     
-    <div>
-
-    <Container maxWidth='lg' style={{paddingTop:50}}>
-    <Info/>
-    </Container>
-
-    <Container maxWidth='lg' style={{paddingTop:50, paddingBottom:25}}>
-    <Form/>
-    </Container>
-
-
+    <div >
+      <Container maxWidth='lg' >
+        <div style={{paddingTop:100}}>
+          <Info/>
+          <KnowMore/>
+          <Divider style={{marginBottom:100}}/>
+          <Form/>
+        </div>
+      </Container>
     </div>
 
 

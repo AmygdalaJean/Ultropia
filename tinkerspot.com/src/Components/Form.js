@@ -107,6 +107,7 @@ function Form() {
           console.log(catagory)
           console.log(calender)
           
+          clear_form();
         }
 
 
@@ -173,10 +174,10 @@ function Form() {
 
     return (
             
-        <Paper style={{backgroundColor: 'white', padding:50, borderRadius:25}}>
-            <Container maxWidth='md'>
+
+            <Container maxWidth='md' style={{paddingBottom:100}}>
                 <Typography variant='h3' align='center'>
-                    What do you want from TinkerSpot?
+                    Want to help us out? Let us know what you want below!
                 </Typography>
                 <div >
                     <Snackbar open={openResp} autoHideDuration={2500} onClose={handleExitResp}
@@ -214,7 +215,7 @@ function Form() {
                             margin="dense"
                             variant="standard"
                             id="location"
-                            label="Country/State, City"
+                            label="In what Location?"
                             type="region"
                             value={location}
                             fullWidth
@@ -269,6 +270,9 @@ function Form() {
                 <Grid container spacing={3} style={{marginTop:'35px'}}>
 
                     <Grid item xs={12}>
+                        <Typography style={{textAlign:'left'}}>
+                            What's your availibility look like?
+                        </Typography>
                         <TimeTable handleChange={handleChangeCalender} checkedarr={calender}/> 
                     </Grid>
 
@@ -298,7 +302,7 @@ function Form() {
 
                 </Grid>
             </Container>
-        </Paper>    
+    
         
     );
 }

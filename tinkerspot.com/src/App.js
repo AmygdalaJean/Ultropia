@@ -6,6 +6,7 @@ import About from './Components/About'
 
 import Header from './Components/Header';
 import Home from './Components/Home'
+import AltHeader from './Components/AltHeader'
 
 import {
   BrowserRouter as Router,
@@ -30,7 +31,7 @@ const custTheme = createTheme({
       contrastText: '#000',
     },
     secondary: {
-      light: '#ffeb3b',
+      light: '#FFFFFF',
       main: '#ff7300',
       dark: '#dead4e',
       contrastText: '#000',
@@ -73,13 +74,20 @@ function App() {
           />
         </Helmet>
         <ThemeProvider theme={custTheme} >
-          <div style={{backgroundColor: [custTheme.palette.primary.light]}}>
+          <div >
+          {/* style={{backgroundColor: [custTheme.palette.primary.light]}} */}
   
-            <Header theme={custTheme} route_function={changeRoute} current_route={route}/>
+            
   
-            <Route path="/" exact component={Home}/>
+            <Route path="/" exact >
+              <Header theme={custTheme} route_function={changeRoute} current_route={route}/>
+              <Home/>
+            </Route>
   
-            <Route path="/about" exact component={About}/>
+            <Route path="/about" exact >
+              <AltHeader theme={custTheme} route_function={changeRoute} current_route={route}/>
+              <About/>
+            </Route>
   
           </div>
         </ThemeProvider>
