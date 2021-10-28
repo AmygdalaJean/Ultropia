@@ -29,10 +29,11 @@ const useStyles = makeStyles((theme) => ({
     },
     subheader:{
         color:[theme.palette.secondary.main],
-        fontSize:50,
+        fontSize:75,
         textAlign:'left',
         [theme.breakpoints.down(1000)]:{
-            textAlign:'center'
+            textAlign:'center',
+            fontSize:50
 
         },
     },

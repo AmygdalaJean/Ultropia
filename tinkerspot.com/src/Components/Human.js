@@ -12,7 +12,6 @@ import useWindowDimensions from './WindowSize';
 
 const useStyles = makeStyles((theme) => ({
     instructor:{
-        paddingRight:100,
         marginTop:50,
         borderRadius: 400/ 2,
         
@@ -24,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     },
     subtext:{
         paddingTop:10,
+        fontSize:18,
     }
 }));
 
@@ -31,7 +31,7 @@ function Header({image, header, description}) {
     const { height, width } = useWindowDimensions();
     const classes = useStyles();
 
-    if (width > 900)
+    if (width > 750)
     {
         return (
             <div className={classes.instructor}>
@@ -60,7 +60,7 @@ function Header({image, header, description}) {
         return (
             <div className={classes.instructor}>
                 
-                <img src={image} style={{width:200, height:200, borderRadius:250, float:'right'}}
+                <img src={image} style={{width:200, height:200, borderRadius:200, float:'right'}}
                 alt="e"/>
 
                 <div style={{textAlign:'justify'}}>
