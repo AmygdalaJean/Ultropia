@@ -21,7 +21,6 @@ import "./static/App.css";
 
 
 
-
 const custTheme = createTheme({
   palette: {
     primary: {
@@ -67,11 +66,12 @@ function App() {
     return (
       <Router>
         <Helmet>
-          <title>TinkerSpot</title>
+          
+          {/* <title>TinkerSpot</title>
           <meta
           name="TinkerSpot Landing Page"
           content="Get involved with TinkerSpot! Sign up for our newsletter and vote on where we should open our first workshop!"
-          />
+          /> */}
         </Helmet>
         <ThemeProvider theme={custTheme} >
           <div >
