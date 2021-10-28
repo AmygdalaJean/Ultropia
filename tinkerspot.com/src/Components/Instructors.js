@@ -7,7 +7,7 @@ import Paper from '@material-ui/core/Paper'
 import Container from '@material-ui/core/Container'
 import { Typography } from "@material-ui/core";
 
-import codyimg from './Images/tinkerlogo.png'
+import codyimg from './Images/tinkerlogoTRANSPARANT.png'
 import wadeimg from './Images/WadeCappa2.jpg'
 import Human from './Human'
 
@@ -21,7 +21,7 @@ function Header({theme}) {
         <div>
 
 
-            <div style={{padding:'50px', textAlign:'center',borderRadius:50, paddingTop:0}} variant='outlined'>
+            <div style={{textAlign:'center',borderRadius:50, paddingTop:0}} variant='outlined'>
 
 
                 <Human

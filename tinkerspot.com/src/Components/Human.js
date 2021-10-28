@@ -8,9 +8,10 @@ import { Typography } from "@material-ui/core";
 
 import codyimg from './Images/tinkerlogo.png'
 
+import useWindowDimensions from './WindowSize';
+
 const useStyles = makeStyles((theme) => ({
     instructor:{
-        padding:15,
         paddingRight:100,
         marginTop:50,
         borderRadius: 400/ 2,
@@ -27,28 +28,56 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Header({image, header, description}) {
+    const { height, width } = useWindowDimensions();
     const classes = useStyles();
-    return (
-        <div className={classes.instructor}>
-            <Grid container spacing={2} >
-                <Grid item xs={4}  className={classes.vert_center}>
-                    <img src={image} style={{width:250, height:250, borderRadius:250, float:'left'}}
-                    alt="e"/>
+
+    if (width > 900)
+    {
+        return (
+            <div className={classes.instructor}>
+                <Grid container spacing={2} >
+                    <Grid item xs={4}  className={classes.vert_center}>
+                        <img src={image} style={{width:250, height:250, borderRadius:250, float:'left'}}
+                        alt="e"/>
+                    </Grid>
+                    <Grid item xs={8}  className={classes.vert_center}>
+                        <div style={{textAlign:'justify'}}>
+                            <Typography variant='h4'>
+                                <b>{header}</b>
+                            </Typography>
+                            <Divider/>
+                            <Typography variant='h5' className={classes.subtext}>
+                                {description}
+                            </Typography>
+                        </div>
+                    </Grid>
                 </Grid>
-                <Grid item xs={8}  className={classes.vert_center}>
-                    <div style={{textAlign:'justify'}}>
-                        <Typography variant='h4'>
-                            <b>{header}</b>
-                        </Typography>
-                        <Divider/>
-                        <Typography variant='h5' className={classes.subtext}>
-                            {description}
-                        </Typography>
-                    </div>
-                </Grid>
-            </Grid>
-        </div>
-    );
+            </div>
+        );
+    }
+    else
+    {
+        return (
+            <div className={classes.instructor}>
+                
+                <img src={image} style={{width:200, height:200, borderRadius:250, float:'right'}}
+                alt="e"/>
+
+                <div style={{textAlign:'justify'}}>
+                    <Typography variant='h4'>
+                        <b>{header}</b>
+                    </Typography>
+                    <Divider/>
+                    <Typography variant='h5' className={classes.subtext}>
+                        {description}
+                    </Typography>
+                </div>
+            </div>
+        );
+    }
+
+
+   
 }
 
 

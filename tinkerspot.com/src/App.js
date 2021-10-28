@@ -8,6 +8,8 @@ import Header from './Components/Header';
 import Home from './Components/Home'
 import AltHeader from './Components/AltHeader'
 
+import useWindowDimensions from './Components/WindowSize';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -52,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function App() { 
+  const { height, width } = useWindowDimensions();
   const classes = useStyles();
   const [route, setRoute] = React.useState([]);
   const changeRoute = (event) => {
@@ -66,19 +69,10 @@ function App() {
     return (
       <Router>
         <Helmet>
-          
-          {/* <title>TinkerSpot</title>
-          <meta
-          name="TinkerSpot Landing Page"
-          content="Get involved with TinkerSpot! Sign up for our newsletter and vote on where we should open our first workshop!"
-          /> */}
         </Helmet>
         <ThemeProvider theme={custTheme} >
           <div >
-          {/* style={{backgroundColor: [custTheme.palette.primary.light]}} */}
-  
-            
-  
+            {/* {width} */}
             <Route path="/" exact >
               <Header theme={custTheme} route_function={changeRoute} current_route={route}/>
               <Home/>

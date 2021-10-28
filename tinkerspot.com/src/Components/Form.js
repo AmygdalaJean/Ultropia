@@ -25,6 +25,8 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 import { makeStyles } from '@material-ui/core/styles';
 
+import useWindowDimensions from './WindowSize';
+
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -50,6 +52,17 @@ const useStyles = makeStyles((theme) => ({
     },
     noLabel: {
       marginTop: theme.spacing(3),
+    },
+    Header:{
+        fontSize:45, 
+        textAlign:'center', 
+        paddingBottom:20,
+        [theme.breakpoints.down(750)]:{
+            fontSize:35,
+        },
+        [theme.breakpoints.down(500)]:{
+            fontSize:30,
+        },
     },
   }));
   
@@ -77,6 +90,7 @@ const cats = [
 ];
 
 function Form() {
+    const { height, width } = useWindowDimensions();      
     const classes = useStyles();
     const [openResp, setOpenResp] = React.useState(false);
     
@@ -172,11 +186,14 @@ function Form() {
         console.log(calender)
     }
 
-    return (
-            
+
+    if (width > 500)
+    {
+        return (
+             
 
             <Container maxWidth='md' style={{paddingBottom:100}}>
-                <Typography variant='h3' align='center'>
+                <Typography variant='h3' align='center' className={classes.Header}>
                     Want to help us out? Let us know what you want below!
                 </Typography>
                 <div >
@@ -305,6 +322,139 @@ function Form() {
     
         
     );
+    }
+    else
+    {
+        return (
+             
+
+            <Container maxWidth='md' style={{paddingBottom:100}}>
+                <Typography variant='h3' align='center' className={classes.Header}>
+                    Want to help us out? Let us know what you want below!
+                </Typography>
+                <div >
+                    <Snackbar open={openResp} autoHideDuration={2500} onClose={handleExitResp}
+                                anchorOrigin={{
+                                vertical: 'center',
+                                horizontal: 'center',
+                            }}>
+                        <Alert onClose={handleExitResp} severity="success" style={{    display: 'flex',}}>
+                            Thank you!
+                        </Alert>
+                        {/* <Alert onClose={handleError} severity="">
+                            Thank you!
+                        </Alert> */}
+                    </Snackbar>
+                </div>
+                        <TextField
+                            className={classes.input}
+                            required
+                            margin="dense"
+                            variant="standard"
+                            id="mail"
+                            value={email}
+                            label="Email Address"
+                            type="email"
+                            fullWidth
+                            onChange={handleChangeEmail}
+                        />
+                        
+
+                        <TextField
+                            className={classes.input}                    
+                            margin="dense"
+                            variant="standard"
+                            id="location"
+                            label="In what Location?"
+                            type="region"
+                            value={location}
+                            fullWidth
+                            multiline
+                            onChange={handleChangeLocation}
+                        />
+     
+                        <div>
+
+                            <FormControl className={classes.formControl}>
+                                <InputLabel id="demo-mutiple-checkbox-label" >What do you want to learn?</InputLabel>
+                                <Select
+                                    labelId="demo-mutiple-checkbox-label"
+                                    id="demo-mutiple-checkbox"
+                                    multiple
+                                    value={catagory}
+                                    onChange={handleChangeCatagories}
+                                    input={<Input />}
+                                    renderValue={(selected) => selected.join(', ')}
+                                    MenuProps={MenuProps}
+                                >
+                                    {cats.map((name) => (
+                                    <MenuItem key={name} value={name}>
+                                        <Checkbox checked={catagory.indexOf(name) > -1} />
+                                        <ListItemText primary={name} />
+                                    </MenuItem>
+                                    ))}
+                                </Select>
+                            </FormControl>
+
+                            <TextField
+                                className={classes.input}  
+                                style={{marginTop:34}}                  
+                                margin="dense"
+                                variant="standard"
+                                id="optionalCat"
+                                label="Tell us what you want!"
+                                type=""
+                                fullWidth
+                                disabled={!catagory.includes("Other...")}
+                                value={optional}
+                                multiline
+                                onChange={handleChangeOptional}
+                            />
+
+                            </div>
+            
+     
+                <Grid container spacing={3} style={{marginTop:'35px'}}>
+
+                    <Grid item xs={12}>
+                        <Typography style={{textAlign:'left'}}>
+                            What's your availibility look like?
+                        </Typography>
+                        <TimeTable handleChange={handleChangeCalender} checkedarr={calender}/> 
+                    </Grid>
+
+                </Grid>
+                <Grid container spacing={3}>
+
+                    <Grid item xs={6}>
+                        <Button 
+                            variant="contained" 
+                            color="primary-light" 
+                            onClick={clear_form} 
+                            style={{float:'left'}}
+                        >
+                            Clear
+                        </Button>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Button 
+                            variant="contained" 
+                            color="secondary" 
+                            onClick={handleSubmit} 
+                            style={{float:'right'}}
+                        >
+                            Submit
+                        </Button>
+                    </Grid>
+
+                </Grid>
+            </Container>
+    
+        
+    );
+    }
+
+    
 }
 
 
