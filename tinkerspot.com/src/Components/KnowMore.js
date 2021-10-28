@@ -39,7 +39,7 @@ function Header() {
                         education program! 
                     </Typography>
                     <div style={{textAlign: 'left',  marginTop:20, marginBottom:5}}> 
-                        <a href="http://localhost:3000/about" >
+                        <a href="https://tinker-spot.com/about" >
                             <Button 
                                 variant="contained" 
                                 color="secondary"
