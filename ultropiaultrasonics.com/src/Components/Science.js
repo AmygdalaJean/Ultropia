@@ -18,6 +18,25 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
 
+    heading:{
+        paddingTop:0,
+        paddingBottom:0,
+        fontSize:50,
+        textAlign:'center', 
+        backgroundColor:'#ffc107',
+        [theme.breakpoints.down(950)]:{
+            fontSize:35
+        },
+        [theme.breakpoints.down(750)]:{
+            fontSize:25,
+            paddingBottom:5,
+        },
+        [theme.breakpoints.down(550)]:{
+            fontSize:18,
+            paddingBottom:5,
+        }
+    },
+
     tableItem: {
         padding: '85px',
         textAlign: 'center',
@@ -84,9 +103,12 @@ function Science() {
     <div id="UltramaticScience">       
 
         
-        <Typography variant="h1" className={classes.subheading} >
-            <b>How Does it Work?</b>
-        </Typography>
+        <Typography variant="overline" >
+            <div className={classes.heading} >
+                How Does It Work?
+            </div>
+        </Typography> 
+
         <Container className={classes.container} maxWidth="md">
 
         <Grid container spacing={2} className={classes.subContainer}>

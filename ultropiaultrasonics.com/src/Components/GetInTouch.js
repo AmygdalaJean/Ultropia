@@ -91,7 +91,7 @@ export default function GetInTouch() {
 
     // <ButtonGroup fullWidth variant="contained" color="secondary" orientation="vertical"  >
     <div>
-        <Button disableElevation fullWidth variant="contained" color="secondary" orientation="vertical"  onClick={handleClickOpen} 
+        <Button disableElevation variant="contained" color="secondary" orientation="vertical"  onClick={handleClickOpen} 
          // style={{fontSize:16}}
         >
           Get in Touch

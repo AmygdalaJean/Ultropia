@@ -4,11 +4,11 @@ import Box from '@material-ui/core/Box'
 import EntryCard from "./Components/EntryCard"
 import VertBar from "./Components/VertBar"
 import Container from '@material-ui/core/Container';
-import Science from './Components/Science';
+import ProductValue from './Components/ProductValue'
+import Science from './Components/Science2';
 import VideoDemos from './Components/VideoDemos';
 import grey from '@material-ui/core/colors/grey';
-import Introsection from './Components/Introsection';
-import ProductValue from './Components/ProductValue';
+import ExplainProduct from "./Components/ExplainProduct";
 import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import HumanRight from "./Components/HumanRight";
 
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   backgroundimg:{
     height: 'auto', 
     width:'100%', 
-    maxWidth:'2200px',
+    maxWidth:'2000px',
     minWidth:'1000px',
     float:'right',  
   },
@@ -117,7 +117,7 @@ function App() {
   return (
       <div  id="Top">
       <ThemeProvider theme={custTheme} >
-        <VertBar/>         
+        {/* <VertBar/>          */}
         
           <Paper className={classes.background}>
             <img src={bgImg} alt="The ultropia prototype" className={classes.backgroundimg}/>
@@ -127,57 +127,44 @@ function App() {
                   
               <EntryCard/>
 
-              <div style={{textAlign:'left'}}>
-                -
-              </div>
-              <Container   maxWidth="md" >    
+
+              <Container   maxWidth="l" >    
                     
-                <div>
+                {/* <div>
                   <Introsection/>
-                </div>
+                </div> */}
 
               </Container> 
             
-                
-              <div className={classes.backgroundGoldFill} style={{padding:25, marginTop:25}}>                  
-            
-                <Container maxWidth="lg" >
-                  <ProductValue/>
-                </Container> 
-              </div>
+                <div style={{paddingTop:50}}>
+                  <ExplainProduct/>
+                </div>
+
 
 
               <Science/>    
               
-              <div className={classes.backgroundGoldFill} style={{padding:25, marginTop:25}}>                  
+         
               
-                <Container maxWidth="lg" style={{width:'90%'}} >
-                  <VideoDemos/>
-                </Container> 
-              </div>
+                
+              <VideoDemos/>
+
               
               <HumanRight />
                
               <div  style={{padding:5, marginTop:0}}>
-                <Container maxWidth="lg" style={{width:'90%'}} >  
+ 
                                
-                    <WeDoItBetter />             
+                <WeDoItBetter />             
                 
                
-                </Container>
+
               
                 </div>
 
                 <BestOption/>
-              
-
-              <div className={classes.backgroundGoldFill} style={{padding:25, marginTop:25}}>                  
-              
-              <Container maxWidth="md" style={{width:'90%'}} >
-              <FooterBar/>
-              </Container> 
-            </div>
-   
+  
+                <div style={{paddingBottom:100}}></div>
                   
           
           

@@ -2,6 +2,7 @@ import React from "react";
 import { Button, ButtonGroup } from "@material-ui/core";
 import Paper from '@material-ui/core/Paper';
 import GetInTouch from "./GetInTouch";
+import Container from "@material-ui/core/Container";
 
 import Logo from './Images/ultropia2.png'
 
@@ -19,125 +20,142 @@ const useStyles = makeStyles((theme) => ({
       width:'100%',
 
     },
+
     logostyle:{
-        width:'100%', 
-        paddingTop:'45px',
-        [theme.breakpoints.down(750)]: {
-            paddingTop:'45px',
-            paddingBottom:'0px',
-        },
+        width:'100%',
 
     }, 
+    moveRight:{
+        textAlign:'left',
+        width:'80%', 
+        paddingTop:'45px',
+
+    },
     overlay: {
         [theme.breakpoints.down(1250)]: {
-          position: 'absolute', left: '50%', top: '15%',
+          position: 'absolute', left: '50%', top: 100,
           transform: 'translate(-50%, -15%)',
           minWidth:'800px'
         },
         [theme.breakpoints.up(1250)]: {
-          position: 'absolute', left: '50%', top: '25%',
+          position: 'absolute', left: '50%', top: 300,
           transform: 'translate(-50%, -25%)',
           width:'1200px'
         },    
         [theme.breakpoints.down(750)]: {
-          position: 'absolute', left: '50%', top: '10%',
+          position: 'absolute', left: '50%', top: 100,
           transform: 'translate(-50%, -10%)',
+          width:400
         },
         
     },
+    introText:{
+        color:'#ffc107',
+        paddingLeft:50,
+        paddingRight:'40%',
+        textAlign:'justify',
+        fontSize:20,
+        [theme.breakpoints.down(850)]: {
+            fontSize:15
+        },
+    },
+    buttonClass:{
+        paddingTop:25,
+        textAlign:'left'
+    },
+    
 
 }));
 
 function EntryCard() {
     const classes = useStyles();
     const { height, width } = useWindowDimensions();
-    const mobilePaperSize = (inwidth) => ({
-        width:360,
-      });
 
-    if (width >= 750) {
-        return ( 
-            <div className={classes.overlay}>
-                <div style={{ maxWidth:'100%', textAlign:'center', alignSelf:'center'}}>
+    return (
+        <div className={classes.overlay}>
+            <div className={classes.moveRight}>
+                <div>
                     <img src={Logo} className={classes.logostyle} alt="Ultropia"/>
-                    <div style={{textAlign:'center', paddingBottom:'10px', paddingTop:'0px'}}>
-                        <ButtonGroup    >
-                            <div style={{textAlign:'left', paddingRight:'200px'}}>
+                </div>
+                <div className={classes.introText}>
+                    
+                    <strong >Say goodbye to your washer and dryer!</strong> Ultropia's 
+                    flagship product is the <i>Ultramatic</i>;
+                    a two-in-one washing and drying machine that uses
+                    a high frequency ultrasonic emitter to clean, sanitize, and dry clothing
+                    faster and more efficient than ever possible before.
+                    <div   className={classes.buttonClass}>
+                        <ButtonGroup>
+                            <div style={{paddingRight:10}}>
                                 <GetInTouch />
                             </div>
-                            <div style={{textAlign:'right'}}>
-                                <Button disableElevation  variant="contained" color="secondary" orientation="horizontal"  href='https://www.linkedin.com/company/ultropia/' 
+                            <div >
+                                <Button 
+                                    disableElevation  
+                                    variant="contained" 
+                                    color="secondary" 
+                                    orientation="horizontal"  
+                                    href='https://www.linkedin.com/company/ultropia/' 
                                 >
-                                    About us
+                                    More About us
                                 </Button>
                             </div>
                         </ButtonGroup>
                     </div>
-                </div>    
-            </div>
-        )
-    }
-    else {
-        return ( 
-            <div className={classes.overlay} style={{textAlign:'center'}} >
-                <div>
-                <img src={Logo} style={{width:360}} alt="Ultropia"/>
                 </div>
-                    <ButtonGroup   style={{paddingTop:'25px'}} >
-                        <div style={{textAlign:'left', paddingRight:'60px' }}>
-                            <GetInTouch />
-                        </div>
-                        <div style={{textAlign:'right'}}>
-                            <Button disableElevation  variant="contained" color="secondary" orientation="horizontal"  href='https://www.linkedin.com/company/ultropia/' 
-                            >
-                                About us
-                            </Button>
-                        </div>
-                    </ButtonGroup>
-            
-            </div>
-        // <Paper className={mobilePaperSize(360)}>
-        //         <img src={Logo} style={{width:'50%'}} alt="Ultropia"/>
-        //         <div style={{textAlign:'center', paddingBottom:'10px', paddingTop:'0px'}}>
-        //             <ButtonGroup    >
-        //                 <div style={{textAlign:'left'}}>
-        //                     <GetInTouch />
-        //                 </div>
-        //                 <div style={{textAlign:'right'}}>
-        //                     <Button disableElevation  variant="contained" color="secondary" orientation="horizontal"  href='https://www.linkedin.com/company/ultropia/' 
-        //                     >
-        //                         About us
-        //                     </Button>
-        //                 </div>
-        //             </ButtonGroup>
-        //         </div>
-        //     </Paper>    
-
-            // <div className={classes.overlay}>
-            //     <Paper style={{ borderRadius:25,  alignSelf:'center'}}>
-            //         <div style={{width:'100%'}}>
-            //             <img src={Logo} className={classes.logostyle} alt="Ultropia"/>
-            //         </div>
-            //     </Paper>   
-            //     <Paper style={{borderRadius:25,  width:'100%', alignSelf:'center', textAlign:'center'}}>
-            //         <div style={{padding:'10px', margin:'10px'}}> 
-            //             <ButtonGroup   color="secondary" orientation="horizontal"  >
-            //                 <div style={{textAlign:'left', paddingRight:'50px'}}>
-            //                     <GetInTouch />
-            //                 </div>
-            //                 <div style={{textAlign:'right'}}>
-            //                     <Button disableElevation  variant="contained" color="secondary" orientation="horizontal"  href='https://www.linkedin.com/company/ultropia/' 
-            //                     >
-            //                         About us
-            //                     </Button>
-            //                 </div>
                 
-            //             </ButtonGroup>
-            //         </div>
-            //     </Paper>
-            // </div>
-        )
-    }
+            </div>
+        </div>
+    )
+
+    // const mobilePaperSize = (inwidth) => ({
+    //     width:360,
+    //   });
+
+    // if (width >= 750) {
+    //     return ( 
+    //         <div className={classes.overlay}>
+    //             <div style={{ maxWidth:'100%', textAlign:'center', alignSelf:'center'}}>
+    //                 <img src={Logo} className={classes.logostyle} alt="Ultropia"/>
+    //                 <div style={{textAlign:'center', paddingBottom:'10px', paddingTop:'0px'}}>
+    //                     <ButtonGroup    >
+    //                         <div style={{textAlign:'left', paddingRight:'200px'}}>
+    //                             <GetInTouch />
+    //                         </div>
+    //                         <div style={{textAlign:'right'}}>
+    //                             <Button disableElevation  variant="contained" color="secondary" orientation="horizontal"  href='https://www.linkedin.com/company/ultropia/' 
+    //                             >
+    //                                 About us
+    //                             </Button>
+    //                         </div>
+    //                     </ButtonGroup>
+    //                 </div>
+    //             </div>    
+    //         </div>
+    //     )
+    // }
+    // else {
+    //     return ( 
+    //         <div className={classes.overlay} style={{textAlign:'center'}} >
+    //             <div>
+    //             <img src={Logo} style={{width:360}} alt="Ultropia"/>
+    //             </div>
+    //                 <ButtonGroup   style={{paddingTop:'25px'}} >
+    //                     <div style={{textAlign:'left', paddingRight:'60px' }}>
+    //                         <GetInTouch />
+    //                     </div>
+    //                     <div style={{textAlign:'right'}}>
+    //                         <Button disableElevation  variant="contained" color="secondary" orientation="horizontal"  href='https://www.linkedin.com/company/ultropia/' 
+    //                         >
+    //                             About us
+    //                         </Button>
+    //                     </div>
+    //                 </ButtonGroup>
+            
+    //         </div>
+
+    //     )
+    // }
         
 
   }

@@ -10,6 +10,30 @@ import { makeStyles } from '@material-ui/core/styles';
 import useWindowDimensions from './WindowSize';
 
 const useStyles = makeStyles((theme) => ({
+    heading:{
+        paddingTop:5,
+        paddingBottom:0,
+        fontSize:50,
+        textAlign:'center', 
+        backgroundColor:'#ffc107',
+        [theme.breakpoints.down(950)]:{
+            fontSize:35
+        },
+        [theme.breakpoints.down(750)]:{
+            fontSize:25,
+            paddingBottom:5,
+        },
+        [theme.breakpoints.down(550)]:{
+            fontSize:18,
+            paddingBottom:5,
+        }
+    },
+    textItem:{
+        fontSize:20,
+        [theme.breakpoints.down(750)]:{
+            fontSize:15
+        }
+    },
 
     tableItem: {
         padding: '85px',
@@ -46,11 +70,14 @@ function Demos() {
 
   
     return (
-        <div style={{padding:'20px'}} id="UltrasonicCleaning" >   
+        <div  id="UltrasonicCleaning" >   
         <div  style={{textAlign:'center'}}>  
-        <Typography variant="h3">
-            <b><i>Ultrasonics in Action</i></b>
-        </Typography>
+        <Typography variant="overline" >
+            <div className={classes.heading} >
+                Ultrasonics in Action
+            </div>
+        </Typography>  
+        <Container maxWidth="lg">
             <Grid container spacing={4} >
                 <Grid item xs={4} > 
                     <div className={classes.videoHeading} >
@@ -95,6 +122,7 @@ function Demos() {
                     </div>
                 </Grid>
             </Grid>
+            </Container>
             </div>  
         </div>
 
@@ -102,10 +130,13 @@ function Demos() {
   }
   else{
       return (
-          <div style={{padding:'20px'}} id="UltrasonicCleaning">
-                      <Typography variant="h4" style={{textAlign:'center'}}>
-                        <b><i>Ultrasonics in Action</i></b>
-                    </Typography>
+          <div  id="UltrasonicCleaning">
+                     <Typography variant="overline" >
+            <div className={classes.heading} >
+                Ultrasonics in Action
+            </div>
+        </Typography>  
+        <Container maxWidth="lg">
               <div className={classes.videoHeading} >
                         <Typography variant="caption" style={{fontSize:16}}>
                             Large ultrasonic washer removes all rust and grease from an old engine.
@@ -141,7 +172,9 @@ function Demos() {
                             width='100%'
                             controls='true'
                         />
+                        
                     </div>
+                </Container>
           </div>
       )
   }

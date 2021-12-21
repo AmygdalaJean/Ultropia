@@ -9,6 +9,25 @@ import "./../static/App.css";
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
+    heading:{
+        marginTop:50,
+        marginBottom:15,
+        paddingTop:10,
+        fontSize:50,
+        textAlign:'center', 
+        backgroundColor:'#ffc107',
+        [theme.breakpoints.down(950)]:{
+            fontSize:35
+        },
+        [theme.breakpoints.down(750)]:{
+            fontSize:25,
+            paddingBottom:5,
+        },
+        [theme.breakpoints.down(550)]:{
+            fontSize:18,
+            paddingBottom:5,
+        }
+    },
     root: {
         flexGrow: 1,
         
@@ -40,38 +59,43 @@ function HumanRight() {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="lg">
-        <div className={classes.root} id="WhatWeNeed">
-        
-                <div className={classes.text}>
-                    <Typography variant="h1" style={{paddingBottom:25, paddingTop:25}}>
-                        <div>Washing Clothes Should Be a <b>Human Right</b> </div>
-                    </Typography>
+      <div>
+          <Typography variant="overline" >
+            <div className={classes.heading}>
+                Washing Clothes Should Be a <b>Human Right</b> 
+            </div>
+        </Typography>
+        <Container maxWidth="lg">
+            <div className={classes.root} id="WhatWeNeed">
+            
+                    <div >
+                        
 
-                    <Container maxWidth='md'>
-                        <ReactPlayer
-                            url="https://www.youtube.com/watch?v=6sqnptxlCcw"
-                            width='100%'
-                            controls='true'
-                        />
-                    
-                    {/* <div >
-                    <Typography variant="h4" className={classes.subHeading} >
-                        <div style={{width:'100%', }}>
-                            <b >
-                                ...but traditional washing machines are not equipped 
-                                for such a challenge.
-                            </b>
-                        </div>
-                    </Typography >
-                    </div> */}
-                    </Container>
-                </div>
+                        <Container maxWidth='md'>
+                            <ReactPlayer
+                                url="https://www.youtube.com/watch?v=6sqnptxlCcw"
+                                width='100%'
+                                controls='true'
+                            />
+                        
+                        {/* <div >
+                        <Typography variant="h4" className={classes.subHeading} >
+                            <div style={{width:'100%', }}>
+                                <b >
+                                    ...but traditional washing machines are not equipped 
+                                    for such a challenge.
+                                </b>
+                            </div>
+                        </Typography >
+                        </div> */}
+                        </Container>
+                    </div>
 
 
 
-        </div>
-    </Container>
+            </div>
+        </Container>
+    </div>
   );
 }
 
