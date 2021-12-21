@@ -116,7 +116,6 @@ function App() {
 
   return (
       <div  id="Top">
-        {width}
       <ThemeProvider theme={custTheme} >
         
           <Paper className={classes.background}>
