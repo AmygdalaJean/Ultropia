@@ -70,16 +70,22 @@ const useStyles = makeStyles((theme) => ({
     },
     causeText: {   
         marginBottom:'20px',
-        fontSize:20,
+        fontSize:18,
         [theme.breakpoints.down(750)]:{
             fontSize:15
+        },
+        [theme.breakpoints.down(550)]:{
+            fontSize:12
         }
     },
     causeSubtitle: {
-        fontSize:20,
+        fontSize:18,
         [theme.breakpoints.down(750)]:{
             fontSize:15
-        } 
+        },
+        [theme.breakpoints.down(550)]:{
+            fontSize:12
+        }
     },
     gridObj:{
         textAlign:'center',
@@ -124,9 +130,7 @@ function Humanarg({top, bottom, image, alt}) {
     else{
         return (
             <div > 
-                
-                <Paper className={classes.causeMobile} elevation={5} style={{paddingTop:0, marginTop:0}}>
-
+                <Paper className={classes.causeMobile} style={{paddingTop:0, marginTop:0}}>
                     <div className={classes.causeDiv}>
                         <Typography variant='h3' className={classes.causeText}>
                             <b>{top}</b>
@@ -135,9 +139,8 @@ function Humanarg({top, bottom, image, alt}) {
                             {bottom}
                         </Typography>
                     </div>
-    
-            </Paper>
-          </div>
+                </Paper>
+            </div>
       )
   }
   

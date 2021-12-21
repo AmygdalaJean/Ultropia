@@ -9,7 +9,7 @@ import ProductIntroduction from './ProductIntroduction'
 import Typography from '@material-ui/core/Typography';
 import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
-import prototypeDiagram from './Images/smallprototypeCr.png'
+import Header from "./Header";
 
 import dirty from './Images/dirtshirt1.png'
 import soundwave from './Images/ultrawave.png'
@@ -40,9 +40,12 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     textItem:{
-        fontSize:20,
+        fontSize:18,
         [theme.breakpoints.down(750)]:{
             fontSize:15
+        },
+        [theme.breakpoints.down(550)]:{
+            fontSize:12
         }
     },
     gridObj:{
@@ -79,11 +82,7 @@ function ExplainProduct() {
 
   return (
     <div >
-        <Typography variant="overline" >
-            <div className={classes.heading} >
-                How does it work?
-            </div>
-        </Typography>  
+        <Header text="How does it work?" />
         <Container maxWidth="lg" >
     
             

@@ -116,8 +116,8 @@ function App() {
 
   return (
       <div  id="Top">
+        {width}
       <ThemeProvider theme={custTheme} >
-        {/* <VertBar/>          */}
         
           <Paper className={classes.background}>
             <img src={bgImg} alt="The ultropia prototype" className={classes.backgroundimg}/>
@@ -127,15 +127,6 @@ function App() {
                   
               <EntryCard/>
 
-
-              <Container   maxWidth="l" >    
-                    
-                {/* <div>
-                  <Introsection/>
-                </div> */}
-
-              </Container> 
-            
                 <div style={{paddingTop:50}}>
                   <ExplainProduct/>
                 </div>
@@ -144,8 +135,7 @@ function App() {
 
               <Science/>    
               
-         
-              
+
                 
               <VideoDemos/>
 
@@ -156,18 +146,13 @@ function App() {
  
                                
                 <WeDoItBetter />             
-                
-               
 
-              
-                </div>
+              </div>
 
-                <BestOption/>
+              <BestOption/>
   
-                <div style={{paddingBottom:100}}></div>
-                  
-          
-          
+              <div style={{paddingBottom:50, marginTop:25,  backgroundColor:'#ffc107'}}></div>
+
       </ThemeProvider>
     </div>
         

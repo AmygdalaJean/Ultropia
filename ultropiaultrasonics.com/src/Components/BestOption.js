@@ -2,7 +2,7 @@ import React from "react";
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import { Container } from "@material-ui/core";
-import { Grid } from "@material-ui/core";
+import Header from "./Header";
 import GetInTouch from "./GetInTouch";
 import { Button, ButtonGroup } from "@material-ui/core";
 
@@ -55,10 +55,13 @@ const useStyles = makeStyles((theme) => ({
       textAlign:'center'
   },
     callText: {
-      fontSize:20,
+      fontSize:18,
       [theme.breakpoints.down(750)]:{
           fontSize:15
-      }
+      },
+      [theme.breakpoints.down(550)]:{
+        fontSize:12
+    }
     }
 }));
 
@@ -67,11 +70,7 @@ function Content() {
 
   return (
     <div  >
-      <Typography variant="overline" >
-          <div className={classes.heading} >
-          The Ultramatic is the Answer.
-          </div>
-      </Typography> 
+       <Header text="the ultramatic is the answer" emphasis=""/>
     
       <Container maxWidth="sm" className={classes.root} id="WeDoItBetter">
         
@@ -92,7 +91,7 @@ function Content() {
 
             
             <div   className={classes.buttonClass}> 
-            <Typography variant='h6' style={{textAlign:'center', paddingBottom:10}}>
+            <Typography variant='h6' style={{textAlign:'justify', paddingBottom:10}} className={classes.callText}>
                         Learn more about us and what we do here! Get in contact if you have Questions!
                     </Typography>
                         <ButtonGroup>

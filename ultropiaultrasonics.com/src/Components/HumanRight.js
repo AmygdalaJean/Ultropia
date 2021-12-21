@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
+import Header from "./Header";
 import ReactPlayer from "react-player"
 import { Container } from "@material-ui/core";
 
@@ -59,13 +59,9 @@ function HumanRight() {
   const classes = useStyles();
 
   return (
-      <div>
-          <Typography variant="overline" >
-            <div className={classes.heading}>
-                Washing Clothes Should Be a <b>Human Right</b> 
-            </div>
-        </Typography>
-        <Container maxWidth="lg">
+      <div style={{paddingTop:75}}>
+          <Header text = "Washing Clothes Should Be a" emphasis ="Human Right" />
+        <Container maxWidth="lg" style={{paddingTop:35}}>
             <div className={classes.root} id="WhatWeNeed">
             
                     <div >

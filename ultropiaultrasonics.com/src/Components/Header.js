@@ -1,42 +1,39 @@
 import React from "react";
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box'
-import EntryCard from "./Components/EntryCard"
-import VertBar from "./Components/VertBar"
-import Container from '@material-ui/core/Container';
-import ProductValue from './Components/ProductValue'
-import Science from './Components/Science';
-import VideoDemos from './Components/VideoDemos';
-import grey from '@material-ui/core/colors/grey';
-import ExplainProduct from "./Components/ExplainProduct";
+
+
 import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import HumanRight from "./Components/HumanRight";
 
-import bgImg from './Components/Images/bgImg1.png'
-
-import WeDoItBetter from "./Components/WeDoItBetter";
-
-import BestOption from "./Components/BestOption";
-import FooterBar from './Components/FooterBar'
-
-import useWindowDimensions from './Components/WindowSize';
-import "./static/App.css";
+import { Typography } from "@material-ui/core";
 
 
 
 const useStyles = makeStyles((theme) => ({
- 
+  heading:{
+    paddingTop:10,
+    fontSize:40,
+    textAlign:'center', 
+    backgroundColor:'#ffc107',
+    [theme.breakpoints.down(950)]:{
+        fontSize:30
+    },
+    [theme.breakpoints.down(750)]:{
+        fontSize:25,
+    },
+    [theme.breakpoints.down(550)]:{
+        fontSize:18,
+    }
+},
 
 }));
 
-function Header({}) { 
+function Header({text, emphasis}) { 
   const classes = useStyles();
 
   return (
     <div >
         <Typography variant="overline" >
             <div className={classes.heading} >
-                Introducing the <b>Ultramatic</b>;
+                {text} <b>{emphasis}</b>
             </div>
         </Typography> 
     </div>

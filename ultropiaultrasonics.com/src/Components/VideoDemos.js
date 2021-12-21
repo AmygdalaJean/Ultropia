@@ -4,6 +4,8 @@ import ReactPlayer from "react-player"
 import Typography from "@material-ui/core/Typography";
 import { Container } from "@material-ui/core";
 
+import Header from "./Header";
+
 import "./../static/App.css";
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -72,11 +74,7 @@ function Demos() {
     return (
         <div  id="UltrasonicCleaning" >   
         <div  style={{textAlign:'center'}}>  
-        <Typography variant="overline" >
-            <div className={classes.heading} >
-                Ultrasonics in Action
-            </div>
-        </Typography>  
+        <Header text = "ultrasonics in action" /> 
         <Container maxWidth="lg">
             <Grid container spacing={4} >
                 <Grid item xs={4} > 
@@ -138,7 +136,7 @@ function Demos() {
         </Typography>  
         <Container maxWidth="lg">
               <div className={classes.videoHeading} >
-                        <Typography variant="caption" style={{fontSize:16}}>
+                        <Typography variant="caption" style={{fontSize:12}}>
                             Large ultrasonic washer removes all rust and grease from an old engine.
                         </Typography>
                     </div>
@@ -150,7 +148,7 @@ function Demos() {
                         />
                     </div>
                     <div className={classes.videoHeading}>
-                        <Typography variant="caption" style={{fontSize:16}}>
+                        <Typography variant="caption" style={{fontSize:12}}>
                             Demonstration of both the speed and precision of an ultrasonic washer. 
                         </Typography>
                     </div>
@@ -162,7 +160,7 @@ function Demos() {
                         />
                     </div>
                     <div className={classes.videoHeading}>
-                        <Typography variant="caption" style={{fontSize:16}}>
+                        <Typography variant="caption" style={{fontSize:12}}>
                             Filters quickly and thoroughly cleaned by an ultrasonic washer without damage.
                         </Typography>
                     </div>
