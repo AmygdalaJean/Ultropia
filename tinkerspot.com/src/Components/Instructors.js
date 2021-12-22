@@ -8,6 +8,7 @@ import Container from '@material-ui/core/Container'
 import { Typography } from "@material-ui/core";
 
 import temp from './Images/tinkerlogoTRANSPARANT.png'
+import aubry from './Images/Aubry_HEadshot.PNG'
 import wadeimg from './Images/WadeCappa2.jpg'
 import Cody from './Images/cody.JPG'
 import Amy from './Images/amy2.jpg'
@@ -40,7 +41,7 @@ function Header({theme}) {
                 />
 
                 <Human
-                    image = {temp}
+                    image = {aubry}
                     header= {"Aubry Birkland"}
                     description = {"Aubry is a technical mind, with a passion for teaching and learning. His technical background includes construction, machining, maintenance, and innovative design for low cost machines. When he’s not building hardware he thoroughly enjoys hosting role playing games and designing campaigns. He also is skilled in 3D printing (SLA) for making miniatures, and is a skilled model painter. He is currently participating in training that is part of becoming a recreational therapist, using games and stories to build people up, socially and mentally, to help recover from hardship."}
                 />

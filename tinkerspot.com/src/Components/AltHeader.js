@@ -9,7 +9,7 @@ import { Typography } from "@material-ui/core";
 
 import Logo from './Images/tinkerSpotLogo.png'
 import CircleLogo from './Images/tinkerlogoTRANSPARANT.png'
-import CornerLogo from './Images/cornerlogo.png'
+import CornerLogo from './Images/tinker2.png'
 
 import useWindowDimensions from './WindowSize';
 
